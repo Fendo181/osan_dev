@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
 
 # users
-get 'users/new'
+resources :users
 end
