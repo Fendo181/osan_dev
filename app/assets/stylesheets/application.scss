@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.welcomePage {
+  background-image: image-url("background-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 30%;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.welcomeTop {
+  text-align: center;
+  margin-top: 110px;
+  margin-bottom: 100px;
+}
+
+.welcomeTop__title {
+  width: 600px;
+  display: inline-block;
+}
+
+.welcomeTop__intro {
+  color: white;
+  font-size: 40px;
+  line-height: 2;
+  text-shadow: 0px 0px 40px #000;
+}
+
+ .welcomeBtns {
+   text-align: center;
+ }
+
+ .welcomeBtns__signUp {
+   background-color: #FF973C;
+   width: 700px;
+   height: 100px;
+   line-height: 100px;
+   color: #fff;
+   letter-spacing: 6px;
+   border-radius: 5px;
+   display: block;
+   margin: 0 auto;
+   font-size: 50px;
+   margin-bottom: 45px;
+ }
+
+ .welcomeBtns__logIn {
+   background-color: #FFF;
+   width: 700px;
+   height: 100px;
+   line-height: 100px;
+   color: #5C5C5C;
+   letter-spacing: 6px;
+   border-radius: 5px;
+   display: block;
+   margin: 0 auto;
+   font-size: 50px;
+   margin-bottom: 60px;
+ }
