@@ -4,16 +4,16 @@
 <div>
   <%= form_for(@user) do |f| %>
   <ul>
-    <!-- <%= f.label :email %> -->
     <li>
+      <!-- <%= f.label :email %> -->
       <%= f.email_field :email, :placeholder => "email" %>
     </li>
-    <!-- <%= f.label :password %> -->
     <li>
+      <!-- <%= f.label :password %> -->
       <%= f.password_field :password,:placeholder => "password" %>
     </li>
-    <!-- <%= f.label :name %> -->
     <li>
+      <!-- <%= f.label :name %> -->
       <%= f.text_field :name, :placeholder => "ユーザ名" %>
     </li>
     <%= f.submit "登録する"%>
