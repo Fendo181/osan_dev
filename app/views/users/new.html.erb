@@ -1,2 +1,22 @@
-<h1>ユーザ新規作成画面</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<p>ユーザ新規作成画面</p>
+<h1>Sign up</h1>
+
+<div>
+  <%= form_for(@user) do |f| %>
+  <ul>
+    <!-- <%= f.label :email %> -->
+    <li>
+      <%= f.email_field :email, :placeholder => "email" %>
+    </li>
+    <!-- <%= f.label :password %> -->
+    <li>
+      <%= f.password_field :password,:placeholder => "password" %>
+    </li>
+    <!-- <%= f.label :name %> -->
+    <li>
+      <%= f.text_field :name, :placeholder => "ユーザ名" %>
+    </li>
+    <%= f.submit "登録する"%>
+  </ul>
+  <% end %>
+</div>
