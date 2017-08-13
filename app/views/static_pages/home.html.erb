@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hold Hands</title>
+  </head>
+  <body class="welcomePage">
+    <div class="welcomeTop">
+      <h1 class="welcomeTop__title">
+        <%= image_tag 'hold-hands-logo.svg' %>
+      </h1>
+      <p class="welcomeTop__intro">
+        ハンドメイド好きの、ハンドメイド好きによる<br>
+        ハンドメイド好きのためのサービス
+      </p>
+    </div>
+
+    <div class="welcomeBtns">
+      <span class="welcomeBtns__signUp">
+        <%= link_to 'サインアップ', 'signup' %>
+      </span>
+      <span class="welcomeBtns__logIn">
+        <%= link_to 'ログイン', 'login' %>
+      </span>
+    </div>
+  </body>
+</html>
