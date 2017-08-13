@@ -4,15 +4,43 @@
   <%= form_for(:session, url: root_path) do |f| %>
   <ul>
     <li>
-      <%= f.email_field :email, :placeholder => "email" %>
+      <p>プロフィール画像</p>
+      <p>ここにプロフィール画像がきます</p>
+      <%= f.file_field :file%>
+    </li>
+
+    <li>
+      <%= f.label :name,"ユーザネーム" %>
+      <p>tsubasa(signupで入力した値が入る)</p>
     </li>
     <li>
-      <%= f.password_field :password,:placeholder => "password" %>
+      <%= f.label :gallery_name,"ギャラリーネーム" %>
+      <%= f.text_field :gallery_name%>
     </li>
     <li>
-      <%= f.text_field :name, :placeholder => "ユーザ名" %>
+      <%= f.label :hp,"ホームページ" %>
+      <%= f.text_field :hp%>
     </li>
-    <%= f.submit "登録する"%>
+    <p>SNSのアカウントを入力してください</p>
+    <li>
+      <%= f.label :tw_id,"Twitter" %>
+      <%= f.text_field :tw_id%>
+
+      <%= f.label :insta_id,"Instagram" %>
+      <%= f.text_field :insta_id%>
+
+      <%= f.label :fb_id,"facebook" %>
+      <%= f.text_field :fb_id%>
+
+      <%= f.label :minne_id,"minne" %>
+      <%= f.text_field :fb_id%>
+    </li>
+
+    <li>
+      <%= f.label :text,"自己紹介" %>
+      <%= f.text_field :text %>
+    </li>
+    <%= f.submit "完了!"%>
   </ul>
   <% end %>
 </div>
