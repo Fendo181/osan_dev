@@ -1,17 +1,22 @@
-<p>ユーザログインページ</p>
-<h1>Log in</h1>
-<div>
-  <%= form_for(:session, url: login_path) do |f| %>
-  <ul>
-    <li>
-      <%= f.email_field :email, :placeholder => "email" %>
-    </li>
-    <li>
-      <%= f.password_field :password,:placeholder => "password" %>
-      <p><%= link_to "(forgot password)"%></p>
-    </li>
-    <%= f.submit "Log in", class: "btn btn-primary" %>
-  </ul>
-  <% end %>
-  <p>New user? <%= link_to "Sign up now!", signup_path %></p>
-</div>
+<body class="welcomePage">
+  <div class="welcomeTop">
+    <h1 class="welcomeTop__title">
+      <%= image_tag 'hold-hands-logo.svg' %>
+    </h1>
+  </div>
+  <div class="loginPage">
+    <%= form_for(:session, url: login_path) do |f| %>
+    <ul class="loginPage__inputs">
+      <li class="loginPage__email">
+        <%= f.email_field :email, :placeholder => "Eメール" %>
+      </li>
+      <li class="loginPage__passwaord">
+        <%= f.password_field :password,:placeholder => "パスワード" %>
+        <p><%= link_to "パスワードを忘れた"%></p>
+      </li>
+      <%= f.submit "Log in", class: "btn btn-primary" %>
+    </ul>
+    <% end %>
+    <p><%= link_to "新しく登録される方はこちら", signup_path %></p>
+  </div>
+</body>
