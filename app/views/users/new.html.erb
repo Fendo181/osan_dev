@@ -1,19 +1,23 @@
-<p>ユーザ新規作成画面</p>
-<h1>Sign up</h1>
-
-<div>
-  <%= form_for(@user) do |f| %>
-  <ul>
-    <li>
-      <%= f.email_field :email, :placeholder => "email" %>
-    </li>
-    <li>
-      <%= f.password_field :password,:placeholder => "password" %>
-    </li>
-    <li>
-      <%= f.text_field :name, :placeholder => "ユーザ名" %>
-    </li>
-    <%= f.submit "登録する"%>
-  </ul>
-  <% end %>
+<body class="welcomePage">
+  <div class="welcomeTop">
+    <h1 class="welcomeTop__title">
+      <%= image_tag 'hold-hands-logo.svg' %>
+    </h1>
+  </div>
+  <div class="signupPage">
+    <%= form_for(@user) do |f| %>
+    <ul class="signupPage__inputs">
+      <li>
+        <%= f.email_field :email, :placeholder => "Eメール", :class => "signupPage__inside signupPage__inside--email" %>
+      </li>
+      <li>
+        <%= f.password_field :password,:placeholder => "パスワード", :class => "signupPage__inside signupPage__inside--password" %>
+      </li>
+      <li>
+        <%= f.text_field :name, :placeholder => "ユーザネーム", :class => "signupPage__inside signupPage__inside--name" %>
+      </li>
+      <%= f.submit "完了"%>
+    </ul>
+    <% end %>
+  </div>
 </div>
