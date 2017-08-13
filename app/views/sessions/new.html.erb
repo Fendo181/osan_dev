@@ -7,16 +7,16 @@
   <div class="loginPage">
     <%= form_for(:session, url: login_path) do |f| %>
     <ul class="loginPage__inputs">
-      <li class="loginPage__email">
-        <%= f.email_field :email, :placeholder => "Eメール" %>
+      <li>
+        <%= f.email_field :email, :placeholder => "Eメール", :class => "loginPage__inside loginPage__inside--email" %>
       </li>
-      <li class="loginPage__passwaord">
-        <%= f.password_field :password,:placeholder => "パスワード" %>
-        <p><%= link_to "パスワードを忘れた"%></p>
+      <li>
+        <%= f.password_field :password, :placeholder => "パスワード", :class => "loginPage__inside loginPage__inside--password" %>
       </li>
-      <%= f.submit "Log in", class: "btn btn-primary" %>
+        <%= f.submit "ログイン", class: "btn btn-primary loginBtn" %>
+      <p class="loginPage__forgot"><%= link_to "パスワードを忘れた方はこちら"%></p>
     </ul>
     <% end %>
-    <p><%= link_to "新しく登録される方はこちら", signup_path %></p>
+    <p class="loginPage__new"><%= link_to "新しく登録される方はこちら", signup_path %></p>
   </div>
 </body>
