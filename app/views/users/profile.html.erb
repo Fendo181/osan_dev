@@ -1,0 +1,21 @@
+<p>プロフィール入力画面</p>
+
+<div>
+  <%= form_for(:session, url: root_path) do |f| %>
+  <ul>
+    <li>
+      <!-- <%= f.label :email %> -->
+      <%= f.email_field :email, :placeholder => "email" %>
+    </li>
+    <li>
+      <!-- <%= f.label :password %> -->
+      <%= f.password_field :password,:placeholder => "password" %>
+    </li>
+    <li>
+      <!-- <%= f.label :name %> -->
+      <%= f.text_field :name, :placeholder => "ユーザ名" %>
+    </li>
+    <%= f.submit "登録する"%>
+  </ul>
+  <% end %>
+</div>
