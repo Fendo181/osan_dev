@@ -61,3 +61,116 @@
     margin-top: 25px;
   }
 }
+
+// プロフィール入力画面
+.profileForm {
+  background-color: #ff8372;
+}
+
+.profileForm__lists {
+  margin: 0 auto;
+  width: 820px;
+}
+
+.profileForm__list {
+  text-align: center;
+  margin-top: 40px;
+  color: #fff;
+  font-size: 21px;
+  // なぜか少し右にずれるので
+  margin-left: -2px;
+}
+
+.profileForm__picWindow {
+  margin: 70px auto 30px;
+  width: 300px;
+  height: 300px;
+  background-color: #ff8372;
+  border-radius: 170px;
+  border: 4px solid #fff;
+  font-size: 150px;
+  text-align: center;
+  line-height: 270px;
+  color: #fff;
+}
+
+.pic-choose {
+  font-size: 21px;
+  margin-left: 66px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.profileForm__textFieldTitle {
+  font-size: 30px;
+  width: 800px;
+  display: inline-flex;
+}
+
+.profileForm__textField {
+  display: block;
+  margin: 0 auto;
+  width: 800px;
+  height: 90px;
+  font-size: 28px;
+  padding-left: 20px;
+  border-radius: 5px;
+  border-style: none;
+  margin-top: 10px;
+}
+
+.profileForm__snsP {
+  color: #fff;
+  font-size: 25px;
+  margin-top: 60px;
+}
+
+.profileForm__snsLists {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profileForm__snsList {
+  margin-right: 45px;
+}
+
+.profileForm__snsListB {
+  margin-bottom: 30px;
+}
+
+.profileForm__sns {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.profileForm__snsTextField {
+  display: block;
+  padding-left: 20px;
+  width: 365px;
+  height: 80px;
+  border-radius: 5px;
+  border-style: none;
+  margin-top: 10px;
+  font-size: 28px;
+}
+
+.profileForm__textField--intro {
+  height: 270px;
+  font-size: 13px;
+  padding: 20px;
+  line-height: 1.4;
+}
+
+.profileForm__submit {
+  background-color: #6073ff;
+  height: 100px;
+  width: 840px;
+  font-size: 34px;
+  color: #fff;
+  letter-spacing: 10px;
+  margin-top: 60px;
+  margin-bottom: 80px;
+  border-radius: 5px;
+  border-style: none;
+}

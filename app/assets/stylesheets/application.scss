@@ -21,6 +21,10 @@ ul {
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
 // ウェルカム画面
 .welcomePage {
   background-image: image-url("background-image.jpg");
