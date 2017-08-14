@@ -70,6 +70,9 @@
 .profileForm__lists {
   margin: 0 auto;
   width: 820px;
+  @media (min-width: 1024px) {
+    width: 410px;
+  }
 }
 
 .profileForm__list {
@@ -79,6 +82,9 @@
   font-size: 21px;
   // なぜか少し右にずれるので
   margin-left: -2px;
+  @media (min-width: 1024px) {
+    margin-top: 15px;
+  }
 }
 
 .profileForm__picWindow {
@@ -92,6 +98,12 @@
   text-align: center;
   line-height: 270px;
   color: #fff;
+  @media (min-width: 1024px) {
+    width: 170px;
+    height: 170px;
+    line-height: 150px;
+    font-size: 100px;
+  }
 }
 
 .pic-choose {
@@ -99,12 +111,20 @@
   margin-left: 66px;
   margin-bottom: 30px;
   color: #fff;
+  @media (min-width: 1024px) {
+    font-size: 13px;
+  }
 }
 
 .profileForm__textFieldTitle {
   font-size: 30px;
   width: 800px;
   display: inline-flex;
+  @media (min-width: 1024px) {
+    width: 400px;
+    font-size: 15px;
+    margin-left: -15px;
+  }
 }
 
 .profileForm__textField {
@@ -117,21 +137,38 @@
   border-radius: 5px;
   border-style: none;
   margin-top: 10px;
+  @media (min-width: 1024px) {
+    width: 400px;
+    height: 45px;
+    margin-top: 0;
+    font-size: 14px;
+    padding-left: 10px;
+  }
 }
 
 .profileForm__snsP {
   color: #fff;
   font-size: 25px;
   margin-top: 60px;
+  @media (min-width: 1024px) {
+    font-size: 12px;
+    margin-top: 30px;
+  }
 }
 
 .profileForm__snsLists {
   display: flex;
   flex-wrap: wrap;
+  @media (min-width: 1024px) {
+    margin-top: 15px;
+  }
 }
 
 .profileForm__snsList {
   margin-right: 45px;
+  @media (min-width: 1024px) {
+    margin-right: 18px;
+  }
 }
 
 .profileForm__snsListB {
@@ -141,7 +178,9 @@
 .profileForm__sns {
   color: #fff;
   font-size: 30px;
-  margin-bottom: 10px;
+  @media (min-width: 1024px) {
+    font-size: 15px;
+  }
 }
 
 .profileForm__snsTextField {
@@ -153,6 +192,13 @@
   border-style: none;
   margin-top: 10px;
   font-size: 28px;
+  @media (min-width: 1024px) {
+    width: 185px;
+    height: 40px;
+    font-size: 14px;
+    margin-top: 5px;
+    padding-left: 10px;
+  }
 }
 
 .profileForm__textField--intro {
@@ -160,6 +206,11 @@
   font-size: 13px;
   padding: 20px;
   line-height: 1.4;
+  @media (min-width: 1024px) {
+    width: 390px;
+    height: 150px;
+    padding: 10px;
+  }
 }
 
 .profileForm__submit {
@@ -173,4 +224,12 @@
   margin-bottom: 80px;
   border-radius: 5px;
   border-style: none;
+  @media (min-width: 1024px) {
+    height: 50px;
+    width: 410px;
+    font-size: 17px;
+    letter-spacing: 5px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
 }
