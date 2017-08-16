@@ -90,13 +90,14 @@
   }
 }
 
-.profileForm__picWindow {
-  margin: 70px auto 30px;
+label.pic-choose-label {
+  display: block;
+  margin: 70px auto 100px;
   width: 300px;
   height: 300px;
   background-color: #ff8372;
   border-radius: 170px;
-  border: 4px solid #fff;
+  border: 3px solid #fff;
   font-size: 150px;
   text-align: center;
   line-height: 270px;
@@ -106,17 +107,21 @@
     height: 170px;
     line-height: 150px;
     font-size: 100px;
+    margin-bottom: 70px;
+  }
+}
+
+.plus-svg {
+  height: 140px;
+  padding-top: 75px;
+  @media (min-width: 1024px) {
+    height: 80px;
+    padding-top: 48px;
   }
 }
 
 .pic-choose {
-  font-size: 21px;
-  margin-left: 66px;
-  margin-bottom: 30px;
-  color: #fff;
-  @media (min-width: 1024px) {
-    font-size: 13px;
-  }
+  display: none;
 }
 
 .profileForm__textFieldTitle {
