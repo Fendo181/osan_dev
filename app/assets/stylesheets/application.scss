@@ -17,8 +17,17 @@ h1 {
   margin: 0;
 }
 
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+// ウェルカム画面
 .welcomePage {
-  background-image: image-url("background-image.jpg");
+  background-image: image-url("background-image2.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 30%;
@@ -46,7 +55,7 @@ h1 {
 }
 
 .welcomeTop__intro {
-  color: white;
+  color: #fff;
   font-size: 40px;
   line-height: 2;
   text-shadow: 0px 0px 40px #000;
@@ -61,7 +70,7 @@ h1 {
  }
 
  .welcomeBtns__signUp {
-   background-color: #FF973C;
+   background-color: #ff973c;
    width: 700px;
    height: 110px;
    line-height: 110px;
@@ -78,7 +87,7 @@ h1 {
      line-height: 50px;
      margin-bottom: 20px;
      a:hover {
-       background-color: #be702d;
+       background-color: #df8434;
        border-radius: 5px;
      }
    }
@@ -90,7 +99,7 @@ h1 {
  }
 
  .welcomeBtns__logIn {
-   background-color: #FFF;
+   background-color: #fff;
    width: 700px;
    height: 110px;
    line-height: 110px;
@@ -112,6 +121,6 @@ h1 {
    a {
      display: block;
      text-decoration: none;
-     color: #5C5C5C;
+     color: #5c5c5c;
    }
  }
