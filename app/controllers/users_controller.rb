@@ -13,7 +13,6 @@ class UsersController < ApplicationController
      flash[:success] = "アカウント登録成功しました!"
      redirect_to @user
     else
-     # アカウント作成失敗時
      render 'new'
     end
   end
