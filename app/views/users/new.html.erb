@@ -14,6 +14,9 @@
         <%= f.password_field :password,:placeholder => "パスワード", :class => "signupPage__inside signupPage__inside--password" %>
       </li>
       <li>
+        <%= f.password_field :password_confirmation,:placeholder => "パスワード(確認)", :class => "signupPage__inside signupPage__inside--password" %>
+      </li>
+      <li>
         <%= f.text_field :name, :placeholder => "ユーザネーム", :class => "signupPage__inside signupPage__inside--name" %>
       </li>
       <%= f.submit "完了", class: "signupBtn"%>
