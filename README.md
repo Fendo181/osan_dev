@@ -92,6 +92,11 @@ Gemfileを更新する。
 bundle install --without production
 ```
 
+Migrationを実行してDBを作成する。
+
+```
+rails db:migrate
+```
 
 後はosan_devのルートディレクトリで以下のコマンドを実行してアプリケーションサーバを立ち上げる
 
