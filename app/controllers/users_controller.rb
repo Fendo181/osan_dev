@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-     flash[:success] = "Welcome to the Sample App!"
+     flash[:success] = "アカウント登録成功しました!"
      redirect_to @user
     else
      # アカウント作成失敗時
