@@ -11,19 +11,15 @@
     <ul class="signupPage__inputs">
       <li>
         <%= f.email_field :email, :placeholder => "Eメール", :class => "signupPage__inside signupPage__inside--email" %>
-        <%= f.text_field :name, class: 'form-control' %>
       </li>
       <li>
         <%= f.password_field :password,:placeholder => "パスワード", :class => "signupPage__inside signupPage__inside--password" %>
-        <%= f.text_field :name, class: 'form-control' %>
       </li>
       <li>
         <%= f.password_field :password_confirmation,:placeholder => "パスワード(確認)", :class => "signupPage__inside signupPage__inside--password" %>
-        <%= f.text_field :name, class: 'form-control' %>
       </li>
       <li>
         <%= f.text_field :name, :placeholder => "ユーザネーム", :class => "signupPage__inside signupPage__inside--name" %>
-        <%= f.text_field :name, class: 'form-control' %>
       </li>
       <%= f.submit "完了", class: "signupBtn"%>
     </ul>
