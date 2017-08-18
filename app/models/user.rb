@@ -7,4 +7,5 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   #セキュアなパスワードを追加
   has_secure_password
+  validates :password, presence: true, length: { minimum: 6 }
 end
