@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'profiles/delete'
 
 root 'static_pages#home'
+get '/welcome', to: 'static_pages#welcome'
 # users
 get '/signup',  to: 'users#new'
 post '/signup',  to: 'users#create'

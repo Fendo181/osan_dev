@@ -1,5 +1,10 @@
 class StaticPagesController < ApplicationController
-  # welcomeページへ飛ぶ
+
   def home
   end
+
+  def welcome
+    
+  end
+
 end
