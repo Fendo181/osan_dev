@@ -1,25 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'communities/new'
-
-  get 'communities/show'
-
-  get 'communities/edit'
-
-  get 'communities/updtae'
-
-  get 'communities/delete'
-
-  get 'communities/index'
-
-  get 'profiles/show'
-
-  get 'profiles/edit'
-
-  get 'profiles/update'
-
-  get 'profiles/delete'
-
 root 'static_pages#home'
 get '/welcome', to: 'static_pages#welcome'
 # users
@@ -32,7 +12,20 @@ post   '/login',   to: 'sessions#create'
 delete '/logout',  to: 'sessions#destroy'
 
 # profile
-get '/profile',  to: 'users#profile'
+# get '/profile',  to: 'users#profile'
+get 'profiles/show'
+get 'profiles/edit'
+get 'profiles/update'
+get 'profiles/delete'
+
+# communities
+get '/communities', to: 'communities#index'
+get 'communities/new'
+get 'communities/show'
+get 'communities/edit'
+get 'communities/updtae'
+get 'communities/delete'
+
 
 resources :users
 end
