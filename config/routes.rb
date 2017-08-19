@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'profiles/show'
+
+  get 'profiles/edit'
+
+  get 'profiles/update'
+
+  get 'profiles/delete'
+
 root 'static_pages#home'
 # users
 get '/signup',  to: 'users#new'
