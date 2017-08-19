@@ -8,11 +8,10 @@ class SessionsController < ApplicationController
     # ユーザーがデータベースにあり、かつ、認証に成功した
     if user && user.authenticate(params[:session][:password])
       log_in user
-      # user_url(user)
-      redirect_to user
+      redirect_to  communities_path
     else
       flash[:danger] = 'emailもしくはpasswordが正しくありません'
       render 'new'
- end
-
+    end
+  end
 end
