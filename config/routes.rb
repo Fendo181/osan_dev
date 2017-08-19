@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'communities/new'
+
+  get 'communities/show'
+
+  get 'communities/edit'
+
+  get 'communities/updtae'
+
+  get 'communities/delete'
+
+  get 'communities/index'
+
   get 'profiles/show'
 
   get 'profiles/edit'
