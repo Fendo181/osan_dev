@@ -6,9 +6,10 @@ class CreateProfiles < ActiveRecord::Migration[5.1]
       t.string :tw_id
       t.string :insta_id
       t.text :content
-      t.referenes :user
+      t.references :user,  foreign_key: true
 
       t.timestamps
     end
+     add_index :profiles, [:user_id, :created_at]
   end
 end
