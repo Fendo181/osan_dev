@@ -8,4 +8,10 @@ module SessionsHelper
     # @current_userの値がnilなら変数に代入するが、nilでなければ代入しない
     @current_user = @current_user || User.find_by(id: session[:user_id])
   end
+
+  # ユーザーがログインしていればtrue、その他ならfalseを返す
+ def logged_in?
+   !current_user.nil?
+ end
+
 end
