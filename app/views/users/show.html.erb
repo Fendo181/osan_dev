@@ -8,9 +8,9 @@
         <!-- <div class="profileForm__picWindow">+</div> -->
         <label for="pic-choose-btn" class="pic-choose-label">
           <svg id="レイヤー_1" class="plus-svg" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169 169"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:5px;}</style></defs><title>plus</title><line class="cls-1" y1="84.5" x2="169" y2="84.5"/><line class="cls-1" x1="84.5" x2="84.5" y2="169"/></svg>
+          <span>プロフィール写真を選択する</span>
+          <%= f.file_field :file, class: "pic-choose", id: "pic-choose-btn"%>
         </label>
-        <span>プロフィール写真を選択する</span>
-        <%= f.file_field :file, class: "pic-choose", id: "pic-choose-btn"%>
       </li>
       <li class="profileForm__list">
         <%= f.label :name,"ユーザネーム", class: "profileForm__textFieldTitle" %>
@@ -24,7 +24,7 @@
         <%= f.label :hp,"ホームページ", class: "profileForm__textFieldTitle" %>
         <%= f.text_field :hp, class: "profileForm__textField", placeholder: "ご自身のギャラリーページなど" %>
       </li>
-      <p class="profileForm__snsP">アカウント名を入力してください。</p>
+      <p class="profileForm__snsP">以下、SNSのアカウント名を入力してください。</p>
       <ul class="profileForm__snsLists">
         <li class="profileForm__snsList profileForm__snsListB">
           <%= f.label :tw_id,"Twitter", class: "profileForm__sns" %>
