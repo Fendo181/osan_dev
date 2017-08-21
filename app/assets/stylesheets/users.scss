@@ -80,7 +80,6 @@
 }
 
 .profileForm__list {
-  text-align: center;
   margin-top: 40px;
   color: #fff;
   font-size: 21px;
@@ -143,7 +142,7 @@ label.pic-choose-label {
   @media (min-width: 1024px) {
     width: 400px;
     font-size: 15px;
-    margin-left: -15px;
+    margin-left: 0px;
   }
 }
 
