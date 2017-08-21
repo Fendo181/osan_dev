@@ -1,0 +1,47 @@
+<% provide(:title, @user.name) %>
+
+<body class="profileForm">
+  <div>
+    <%= form_for(:session, url: root_path) do |f| %>
+    <ul class="profileForm__lists">
+      <li class="profileForm__list">
+        <!-- <div class="profileForm__picWindow">+</div> -->
+        <label for="pic-choose-btn" class="pic-choose-label">
+          <svg id="レイヤー_1" class="plus-svg" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169 169"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:5px;}</style></defs><title>plus</title><line class="cls-1" y1="84.5" x2="169" y2="84.5"/><line class="cls-1" x1="84.5" x2="84.5" y2="169"/></svg>
+          <span>プロフィール写真を選択する</span>
+          <%= f.file_field :file, class: "pic-choose", id: "pic-choose-btn"%>
+        </label>
+      </li>
+      <li class="profileForm__list">
+        <%= f.label :name,"ユーザネーム", class: "profileForm__textFieldTitle" %>
+        <%= @user.name %>
+      </li>
+      <li class="profileForm__list">
+        <%= f.label :gallery_name,"ギャラリーネーム", class: "profileForm__textFieldTitle" %>
+        <%= f.text_field :gallery_name, class: "profileForm__textField"%>
+      </li>
+      <li class="profileForm__list">
+        <%= f.label :hp,"ホームページ", class: "profileForm__textFieldTitle" %>
+        <%= f.text_field :hp, class: "profileForm__textField", placeholder: "ご自身のギャラリーページなど" %>
+      </li>
+      <p class="profileForm__snsP">以下、SNSのアカウント名を入力してください。</p>
+      <ul class="profileForm__snsLists">
+        <li class="profileForm__snsList profileForm__snsListB">
+          <%= f.label :tw_id,"Twitter", class: "profileForm__sns" %>
+          <%= f.text_field :tw_id, class: "profileForm__snsTextField"%>
+        </li>
+        <li class="profileForm__snsListB">
+          <%= f.label :insta_id,"Instagram", class: "profileForm__sns" %>
+          <%= f.text_field :insta_id, class: "profileForm__snsTextField"%>
+        </li>
+      </ul>
+
+      <li class="profileForm__list">
+        <%= f.label :text,"自己紹介", class: "profileForm__textFieldTitle" %>
+        <%= f.text_area :text, class: "profileForm__textField profileForm__textField--intro" %>
+      </li>
+      <%= f.submit "完了!", class: "profileForm__submit" %>
+    </ul>
+    <% end %>
+  </div>
+</body>
