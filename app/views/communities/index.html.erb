@@ -1,3 +1,25 @@
-<h1>Communities#index</h1>
 <%= render 'shared/header' %>
-<h1>コミュニティページ的な何かがある予定です</h1>
+
+<!-- 検索 -->
+<div class="">
+  <%= form_tag(users_path, method:"get") do%>
+  <%= text_field_tag :name, params[:name] %>
+  <%= submit_tag "検索" %>
+  <% end %>
+</div>
+
+<!-- カテゴリー -->
+<div class=>
+  <ul>
+    <a href="#"><li>すべて</li></a>
+    <a href="#"><li>アクセサリー</li></a>
+    <a href="#"><li>ファッション</li></a>
+    <a href="#"><li>雑貨</li></a>
+    <a href="#"><li>素材</li></a>
+  </ul>
+</div>
+
+<!-- コミュニティ一覧 -->
+<h2>すべて</h2>
+<ul>
+</ul>

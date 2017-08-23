@@ -1,4 +1,8 @@
 class CommunitiesController < ApplicationController
+
+  def index
+  end
+
   def new
   end
 
@@ -12,8 +16,5 @@ class CommunitiesController < ApplicationController
   end
 
   def delete
-  end
-
-  def index
   end
 end
