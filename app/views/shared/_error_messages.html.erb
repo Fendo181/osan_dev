@@ -1,8 +1,8 @@
 <% if @user.errors.any? %>
   <div>
-    <ul>
+    <ul class="error-message-wrapper">
     <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
+      <li class="error-message"><%= msg %></li>
     <% end %>
     </ul>
   </div>

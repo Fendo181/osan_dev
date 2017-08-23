@@ -54,6 +54,7 @@
   height: 110px;
   margin-top: 50px;
   border-radius: 5px;
+  margin-bottom: 60px;
   cursor: pointer;
   @media (min-width: 1024px) {
     font-size: 20px;
@@ -64,6 +65,28 @@
 }
 .signupBtn:hover {
   background: #df8434;
+}
+
+// エラー
+.error-message-wrapper {
+  margin: 0 auto;
+  width: 710px;
+  margin-bottom: 20px;
+  @media (min-width: 1024px) {
+    width: 390px;
+  }
+}
+
+.error-message {
+  background: #ffb3b3;
+  color: #ba3131;
+  margin-bottom: 5px;
+  padding: 20px;
+  border-radius: 5px;
+  @media (min-width: 1024px) {
+    font-size: 12px;
+    padding: 13px;
+  }
 }
 
 // プロフィール入力画面

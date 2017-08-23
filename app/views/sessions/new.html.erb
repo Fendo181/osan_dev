@@ -6,9 +6,11 @@
   </div>
 
   <!-- flashメッセージを追加 -->
-  <div>
+  <div class="error-message-wrapper">
     <% flash.each do |message_type, message| %>
+    <div class="error-message">
       <%= message %>
+    </div>
     <% end %>
   </div>
 
