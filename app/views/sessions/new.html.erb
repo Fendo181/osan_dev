@@ -4,6 +4,16 @@
       <%= image_tag 'hold-hands-logo.svg' %>
     </h1>
   </div>
+
+  <!-- flashメッセージを追加 -->
+  <div class="error-message-wrapper">
+    <% flash.each do |message_type, message| %>
+    <div class="error-message">
+      <%= message %>
+    </div>
+    <% end %>
+  </div>
+
   <div class="loginPage">
     <%= form_for(:session, url: login_path) do |f| %>
     <ul class="loginPage__inputs">
