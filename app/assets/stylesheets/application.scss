@@ -25,6 +25,10 @@ li {
   list-style: none;
 }
 
+input:focus {
+  outline: none;
+}
+
 // ウェルカム画面
 .welcomePage {
   background-image: image-url("background-image2.jpeg");
