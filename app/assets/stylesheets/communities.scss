@@ -1,3 +1,59 @@
 // Place all the styles related to the Communities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.intro {
+  // background-image: image-url("background-image2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 30%;
+  background-attachment: fixed;
+  position: relative;
+  height: 100%;
+}
+
+.introTop {
+  text-align: center;
+  margin-top: 130px;
+}
+
+.introTop__title {
+  width: 600px;
+  display: inline-block;
+}
+
+.introTop__message {
+  margin-top: 90px;
+  font-size: 38px;
+  line-height: 2.6;
+}
+
+.introBtn {
+  margin: 0 auto;
+  font-size: 40px;
+  width: 706px;
+  border-style: none;
+  background-color: #ff973c;
+  color: #fff;
+  height: 110px;
+  line-height: 110px;
+  margin-top: 850px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  @media (min-width: 1024px) {
+    font-size: 20px;
+    width: 385px;
+    height: 55px;
+    line-height: 55px;
+    margin-top: 25px;
+  }
+}
+.introBtn:hover {
+  background: #df8434;
+}
+
+.intro__toCommunity a{
+  text-decoration: none;
+  color: #fff;
+}
