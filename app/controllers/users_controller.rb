@@ -4,8 +4,13 @@ class UsersController < ApplicationController
   end
 
   def show
-   @user = User.find(params[:id])
-   @profile = Profile.new(params[:id])
+    @user = User.find(params[:id])
+    @profile = Profile.new(user_id:@user.id)
+  end
+
+  def edit
+    @user = User.find(params[:id])
+    @profile = Profile.new(user_id:@user.id)
   end
 
   def create

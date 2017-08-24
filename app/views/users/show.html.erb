@@ -66,6 +66,7 @@
         <% end %>
       </li>
       <%= f.submit "プロフィールを編集する!", class: "profileForm__submit" %>
+      <%= link_to "Settings", edit_user_path(current_user) %>
     </ul>
     <% end %>
   </div>

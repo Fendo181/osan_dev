@@ -15,7 +15,7 @@ delete '/logout',  to: 'sessions#destroy'
 # get '/profile',  to: 'users#profile'
 get 'profiles/show'
 get 'profiles/edit'
-get 'profiles/update'
+post 'profiles/update', to: 'profiles#update'
 get 'profiles/delete'
 
 # communities
