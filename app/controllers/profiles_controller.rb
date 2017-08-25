@@ -3,17 +3,23 @@ class ProfilesController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
+    @profile = Profile.new(user_id: params[:id])
+  end
+
+  def create
+    @profile = User.new(user_params)
+    if @user.save
+      flash[:success] = "アカウント登録に成功しました!"
+      #redirect_to @user
+      redirect_to '/welcome'
+    else
+      render 'new'
+    end
   end
 
   def update
-   @user = User.find(1)
-   @profile = Profile.new(user_id:@user.id)
-   if @profile.update_attributes(:gallery_name,'gallery_name')
-     # 更新に成功した場合を扱う。
-   else
-     render 'new'
-   end
- end
+  end
 
   def delete
   end

@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @profile = Profile.new(user_id:@user.id)
+    @profile = Profile.find(user_id: @user.id)
   end
 
   def edit
@@ -18,16 +18,10 @@ class UsersController < ApplicationController
     if @user.save
       flash[:success] = "アカウント登録に成功しました!"
       #redirect_to @user
-      @current_user = User.new(user_params)
       redirect_to '/welcome'
     else
       render 'new'
     end
-  end
-
-  #一旦はViewファイルの為
-  def profile
-    @user = User.new
   end
 
   private
