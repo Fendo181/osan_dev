@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
   def new
     @user = User.new
+
   end
 
   def show
     @user = User.find(params[:id])
-    @profile = Profile.new(user_id:@user.id)
+    @profile = Profile.find(@user.id)
   end
 
   def edit
@@ -17,8 +18,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "アカウント登録に成功しました!"
-      #redirect_to @user
-      @current_user = User.new(user_params)
+      @profile = Profile.create(user_id:@user.id)
+      # @current_user = User.new(user_params)
       redirect_to '/welcome'
     else
       render 'new'
