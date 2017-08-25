@@ -1,0 +1,99 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// ログイン画面
+.loginPage__inputs {
+  list-style: none;
+  margin: 0 auto;
+  text-align: center;
+ }
+
+.loginPage__inside {
+  width: 670px;
+  height: 100px;
+  font-size: 25px;
+  padding-left: 37px;
+  border-style: none;
+  @media (min-width: 1024px){
+    width: 367px;
+    height: 50px;
+    font-size: 14px;
+    padding-left: 20px;
+  }
+}
+
+.loginPage__inside--email {
+  border-radius: 5px 5px 0 0;
+  border-bottom: 4.5px solid #c9c9c9;
+  margin-bottom: -1.5px;
+  @media (min-width: 1024px) {
+    border-bottom: 3.5px solid #c9c9c9;
+  }
+}
+
+.loginPage__inside--password {
+  border-radius: 0 0 5px 5px;
+}
+
+.loginBtn {
+  margin: 0 auto;
+  font-size: 40px;
+  width: 706px;
+  border-style: none;
+  background-color: #ff973c;
+  color: #fff;
+  height: 110px;
+  margin-top: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  @media (min-width: 1024px) {
+    font-size: 20px;
+    width: 385px;
+    height: 55px;
+    margin-top: 25px;
+  }
+}
+.loginBtn:hover {
+  background-color: #df8434;
+}
+
+.loginPage__forgot {
+  margin-top: 30px;
+  a {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 60px #000;
+    @media (min-width: 1024px) {
+      font-size: 15px;
+    }
+  }
+}
+
+.loginPage__new {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding-top: 35px;
+  border-top: 3.5px solid #fff;
+  width: 660px;
+  @media (min-width: 1024px) {
+    width: 380px;
+    padding-top: 17px;
+    margin-top: 0;
+    border-top: 1.5px solid #fff;
+  }
+  a {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 60px #000;
+    @media (min-width: 1024px) {
+      font-size: 15px;
+    }
+  }
+}
