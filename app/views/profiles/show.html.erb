@@ -38,13 +38,13 @@
         <li class="profileForm__snsList profileForm__snsListB">
           <label class="profileForm__sns">Twitter</label>
             <% if  @profile.tw_id? %>
-              <%= @profile.tw_id %>
+            <a href="https://twitter.com/<%= @profile.tw_id %>">@<%= @profile.tw_id %></a>
             <% end %>
         </li>
         <li class="profileForm__snsListB">
           <label class="profileForm__sns">Instagram</label>
             <% if  @profile.insta_id? %>
-              <%= @profile.insta_id %>
+            <a href="https://www.instagram.com/<%= @profile.tw_id %>">@<%= @profile.insta_id %></a>
             <% end %>
         </li>
       </ul>
