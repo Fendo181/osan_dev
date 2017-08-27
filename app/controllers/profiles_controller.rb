@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
   def show
+    @profile = Profile.find(user_id: params[:id])
   end
 
   def edit
@@ -7,6 +8,7 @@ class ProfilesController < ApplicationController
     @profile = Profile.new(user_id: params[:id])
   end
 
+  # profikle登録
   def create
     @profile = User.new(user_params)
     if @user.save
