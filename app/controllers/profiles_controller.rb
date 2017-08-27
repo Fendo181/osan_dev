@@ -1,28 +1,30 @@
 class ProfilesController < ApplicationController
   def show
-    @profile = Profile.find(user_id: params[:id])
+    @profile = Profile.find(params[:id])
   end
 
   def edit
-    @user = User.find(params[:id])
-    @profile = Profile.new(user_id: params[:id])
-  end
-
-  # profikle登録
-  def create
-    @profile = User.new(user_params)
-    if @user.save
-      flash[:success] = "アカウント登録に成功しました!"
-      #redirect_to @user
-      redirect_to '/welcome'
-    else
-      render 'new'
-    end
+    @profile = Profile.find(params[:id])
   end
 
   def update
+    @profile = Profile.find(params[:id])
+    if @profile.update_attributes(profile_params)
+    #登録成功時の処理
+      redirect_to @profile
+    else
+      render 'edit'
+    end
   end
 
   def delete
   end
+
+  private
+
+    def profile_params
+      params.require(:profile).permit(:gallery_name, :hp, :tw_id,
+                                      :insta_id,:content)
+    end
+
 end
