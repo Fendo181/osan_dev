@@ -20,12 +20,13 @@ delete '/logout',  to: 'sessions#destroy'
 
 # communities
 get '/communities', to: 'communities#index'
-get 'communities/new'
-get 'communities/show'
-get 'communities/edit'
-get 'communities/updtae'
-get 'communities/delete'
+# get 'communities/new'
+# get 'communities/show'
+# get 'communities/edit'
+# get 'communities/updtae'
+# get 'communities/delete'
 
+resources :communities
 resources :profiles
 resources :users
 end
