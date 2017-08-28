@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gallery_name: MyString
+  hp: MyString
+  tw_id: MyString
+  insta_id: MyString
+  content: MyText
+  user: 
+
+two:
+  gallery_name: MyString
+  hp: MyString
+  tw_id: MyString
+  insta_id: MyString
+  content: MyText
+  user: 

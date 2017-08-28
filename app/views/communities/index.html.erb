@@ -1,0 +1,128 @@
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<div class="community-index">
+  <div class="communityHeader">
+    <h1 class="go-to-top">
+      <%= link_to '', communities_path %>
+    </h1>
+
+    <!-- 検索 -->
+    <!-- <div class="serch">
+      <%= form_tag(users_path, method:"get") do%>
+      <%= text_field_tag :name, params[:name], class: "serch-text" %>
+      <%= submit_tag "検索" , class: "serch-submit"%>
+      <% end %>
+    </div> -->
+    <div class="serch">
+      <div class="icon-search-container" data-ic-class="search-trigger">
+        <span class="fa fa-search"></span>
+        <input type="text" class="search-input serch-text" data-ic-class="search-input" placeholder="検索"/>
+        <span class="fa fa-times-circle" data-ic-class="search-clear"></span>
+      </div>
+    </div>
+    <!-- アイコン -->
+    <div class="profileIcon">
+      <label class="profileIcon__items" for="Panel1">アイコン</label>
+          <input type="checkbox" id="Panel1" class="on-off" />
+          <%= render 'shared/header' %>
+    </div>
+  </div>
+
+  <!-- カテゴリー -->
+  <div class="categoriesItems">
+    <ul class="categories">
+      <li class="category"><a href="#">すべて</a></li>
+      <li class="category"><a href="#">アクセサリー</a></li>
+      <li class="category"><a href="#">ファッション</a></li>
+      <li class="category"><a href="#">雑貨</a></li>
+      <li class="category"><a href="#">素材</a></li>
+      <li class="category"><a href="#">その他</a></li>
+    </ul>
+  </div>
+
+  <!-- コミュニティ一覧 -->
+  <div class="communities-wrapper">
+    <h2>すべて</h2>
+    <ul class="communities">
+      <li class="community">
+        <div class="communityImage">
+          <a href="#"></a>
+        </div>
+        <h3>コミュニティー名</h3>
+      </li>
+      <li class="community">
+        <div class="communityImage">
+          <a href="#"></a>
+        </div>
+        <h3>コミュニティー名</h3>
+      </li>
+      <li class="community">
+        <div class="communityImage">
+          <a href="#"></a>
+        </div>
+        <h3>コミュニティー名</h3>
+      </li>
+      <li class="community">
+        <div class="communityImage">
+          <a href="#"></a>
+        </div>
+        <h3>コミュニティー名</h3>
+      </li>
+      <li class="community">
+        <div class="communityImage">
+          <a href="#"></a>
+        </div>
+        <h3>コミュニティー名</h3>
+      </li>
+      <li class="community">
+        <div class="communityImage">
+          <a href="#"></a>
+        </div>
+        <h3>コミュニティー名</h3>
+      </li>
+      <li class="community">
+        <div class="communityImage">
+          <a href="#"></a>
+        </div>
+        <h3>コミュニティー名</h3>
+      </li>
+      <li class="community">
+        <div class="communityImage">
+          <a href="#"></a>
+        </div>
+        <h3>コミュニティー名</h3>
+      </li>
+      <li class="community">
+        <div class="communityImage">
+          <a href="#"></a>
+        </div>
+        <h3>コミュニティー名</h3>
+      </li>
+      <li class="community">
+        <div class="communityImage">
+          <a href="#"></a>
+        </div>
+        <h3>コミュニティー名</h3>
+      </li>
+      <li class="community">
+        <div class="communityImage">
+          <a href="#"></a>
+        </div>
+        <h3>コミュニティー名</h3>
+      </li>
+      <li class="community">
+        <div class="communityImage">
+          <a href="#"></a>
+        </div>
+        <h3>コミュニティー名</h3>
+      </li>
+    </ul>
+  </div>
+
+  <!-- コミュニティ作成ボタン -->
+  <div class="createCommunityBtn">
+      <%= link_to "" %>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+<% provide(:title, @profile.user.name) %>
+
+<body class="profileForm">
+  <div>
+    <ul class="profileForm__lists">
+      <li class="profileForm__list">
+        <!-- <div class="profileForm__picWindow">+</div> -->
+        <label for="pic-choose-btn" class="pic-choose-label">
+          <svg id="レイヤー_1" class="plus-svg" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169 169"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:5px;}</style></defs><title>plus</title><line class="cls-1" y1="84.5" x2="169" y2="84.5"/><line class="cls-1" x1="84.5" x2="84.5" y2="169"/></svg>
+        </label>
+      </li>
+      <p>ここは何らかの画像が入る予定です。</p>
+      <li class="profileForm__list">
+        <label class="profileForm__textFieldTitle">ユーザネーム</label>
+        <%= @profile.user.name %>
+      </li>
+
+      <li class="profileForm__list">
+        <label class="profileForm__textFieldTitle">ギャラリーネーム</label>
+        <% if @profile.gallery_name? %>
+          <%= @profile.gallery_name %>
+        <% else %>
+          <p>まだ入力されてません</p>
+        <% end %>
+      </li>
+
+      <li class="profileForm__list">
+        <label class="profileForm__textFieldTitle">ホームページ</label>
+        <% if  @profile.hp? %>
+          <%= @profile.hp %>
+        <% else %>
+          <p>まだ入力されてません</p>
+        <% end %>
+      </li>
+
+      <p class="profileForm__snsP">SNSのアカウント</p>
+      <ul class="profileForm__snsLists">
+        <li class="profileForm__snsList profileForm__snsListB">
+          <label class="profileForm__sns">Twitter</label>
+            <% if  @profile.tw_id? %>
+            <a href="https://twitter.com/<%= @profile.tw_id %>">@<%= @profile.tw_id %></a>
+            <% end %>
+        </li>
+        <li class="profileForm__snsListB">
+          <label class="profileForm__sns">Instagram</label>
+            <% if  @profile.insta_id? %>
+            <a href="https://www.instagram.com/<%= @profile.tw_id %>">@<%= @profile.insta_id %></a>
+            <% end %>
+        </li>
+      </ul>
+
+      <li class="profileForm__list">
+        <label class="profileForm__textFieldTitle">自己紹介</label>
+        <% if  @profile.content? %>
+          <%= @profile.content %>
+        <% else %>
+          <p>まだ入力されてません</p>
+        <% end %>
+      </li>
+      <%= link_to "プロフィールを編集する", edit_profile_path(@profile.user.id),class: "profileForm__submit" %>
+    </ul>
+  </div>
+</body>

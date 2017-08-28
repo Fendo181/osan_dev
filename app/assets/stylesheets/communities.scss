@@ -1,0 +1,360 @@
+// Place all the styles related to the Communities controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// ウェルカムページ
+.intro {
+  // background-image: image-url("background-image2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 30%;
+  background-attachment: fixed;
+  position: relative;
+  height: 100%;
+}
+
+.introTop {
+  text-align: center;
+  margin-top: 130px;
+}
+
+.introTop__title {
+  width: 600px;
+  display: inline-block;
+}
+
+.introTop__message {
+  margin-top: 90px;
+  font-size: 38px;
+  line-height: 2.6;
+}
+
+.introBtn {
+  margin: 0 auto;
+  font-size: 40px;
+  width: 706px;
+  border-style: none;
+  background-color: #ff973c;
+  color: #fff;
+  height: 110px;
+  line-height: 110px;
+  margin-top: 850px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  @media (min-width: 1024px) {
+    font-size: 20px;
+    width: 385px;
+    height: 55px;
+    line-height: 55px;
+    margin-top: 25px;
+  }
+}
+.introBtn:hover {
+  background: #df8434;
+}
+
+.intro__toCommunity a{
+  text-decoration: none;
+  color: #fff;
+}
+
+// コミュニティー一覧ページ
+.community-index {
+  margin: 0 auto;
+  @media (min-width: 1024px) {
+    max-width: 800px;
+  }
+}
+
+.communityHeader {
+  display: flex;
+  position: relative;
+  height: 150px;
+  border-bottom: 0.3px solid #c9c9c9;
+  margin-left: -10px;
+  margin-right: -10px;
+  @media (min-width: 1024px) {
+    height: 100px;
+  }
+}
+
+.go-to-top {
+  background-image: image-url("hold-hands2.svg");
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 45px;
+  position: relative;
+  top: 48px;
+  left: 30px;
+  @media (min-width: 1024px) {
+    width: 180px;
+  }
+  a {
+    display: inline-block;
+    height: 45px;
+    width: 100%
+  }
+}
+
+label.profileIcon__items {
+  position: absolute;
+  top: 22px;
+  right: 30px;
+  background: #ff8372;
+  color: #fff;
+  display: block;
+  border: 1px solid #ff8372;
+  border-radius: 50px;
+  height: 90px;
+  width: 90px;
+  line-height: 90px;
+  text-align: center;
+  @media (min-width: 1024px) {
+    width: 55px;
+    height: 55px;
+    top: 26px;
+    font-size: 10px;
+    line-height: 55px;
+  }
+}
+
+input[type="checkbox"].on-off{
+  display: none;
+}
+
+.profileIcon ul {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  list-style: none;
+  position: absolute;
+  top: 140px;
+  right: 45px;
+  background-color: #ff8372;
+  width: 180px;
+}
+
+.profileIcon li {
+  font-size: 25px;
+  text-align: center;
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+}
+.profileIcon li:first-child {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+}
+
+input[type="checkbox"].on-off + ul{
+  height: 0;
+  overflow: hidden;
+}
+
+input[type="checkbox"].on-off:checked + ul{
+  height: 114px;
+  padding: 15px;
+  margin-right: -20px;
+  @media (min-width: 1024px) {
+    height: 100px;
+    margin-top: -40px;
+  }
+}
+
+// 検索
+// .serch form {
+//   position: absolute;
+//   right: 160px;
+//   top: 45px;
+// }
+//
+// .serch-text {
+//   font-size: 23px;
+//   background: gray;
+//   padding: 10px;
+// }
+//
+// .serch-submit {
+//   font-size: 20px;
+// }
+
+.categoriesItems {
+  border-bottom: 1px solid #c9c9c9;
+  margin: 40px -10px 0;
+  padding: 0 50px 40px;
+  @media (min-width: 1024px) {
+    margin: 20px -10px 0;
+    padding: 0 50px 20px;
+  }
+}
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category {
+  font-size: 28px;
+  @media (min-width: 1024px) {
+    font-size: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: #5c5c5c;
+  }
+}
+
+.serch {
+  text-align: center;
+  margin: 0px auto;
+  position: absolute;
+  top: 22px;
+  right: 155px;
+  @media (min-width: 1024px) {
+    top: 30px;
+    right: 120px;
+  }
+}
+
+.icon-search-container {
+  display: inline-block;
+  border: 2px solid #d9d9d9;
+  border-radius: 50px;
+  height: 90px;
+  width: 300px;
+  position: relative;
+  transition: width 0.2s ease-out;
+  backface-visibility: hidden;
+  @media (min-width: 1024px) {
+    height: 45px;
+    width: 270px;
+  }
+
+  &.active {
+    width: 285px;
+
+    .fa-times-circle {
+      opacity: 1;
+    }
+    .search-input {
+      width: 200px;
+    }
+  }
+
+.fa-search {
+    color: #ff8372;
+    font-size: 50px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    cursor: pointer;
+    @media (min-width: 1024px) {
+      font-size: 28px;
+      top: 8px;
+    }
+  }
+  .fa-times-circle {
+    opacity: 0;
+    color: #d9d9d9;
+    font-size: 20px;
+    position: absolute;
+    top: 12px;
+    right: 8px;
+    transition: opacity 0.2s ease-out;
+    cursor: pointer;
+  }
+
+  .search-input {
+    position: absolute;
+    cursor: default;
+    left: 78px;
+    top: 23px;
+    width: 180px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    line-height: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: width 0.2s ease-out;
+    @media (min-width: 1024px) {
+      font-size: 18px;
+      top: 8px;
+      left: 55px;
+      width: 190px;
+    }
+  }
+
+}
+
+// コミュニティー一覧
+.communities-wrapper {
+  padding: 50px;
+  h2 {
+    margin: 0;
+    margin-bottom: 40px;
+    @media (min-width: 1024px) {
+      margin-bottom: 25px;
+      margin-top: -20px;
+      font-size: 22px;
+    }
+  }
+}
+
+.communities {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.community {
+  margin-bottom: 50px;
+  h3 {
+    font-size: 24px;
+    @media (min-width: 1024px) {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+  }
+}
+
+.communityImage {
+  width: 400px;
+  height: 270px;
+  background: gray;
+  border-radius: 5px;
+  @media (min-width: 1024px) {
+    width: 318px;
+    height: 200px;
+  }
+}
+
+.community:nth-child(odd) {
+  margin-right: 64px;
+}
+
+.createCommunityBtn {
+  background-image: image-url("create-btn.svg");
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 120px;
+  position: fixed;
+  bottom: 60px;
+  right: 40px;
+  @media (min-width: 1024px) {
+    width: 70px;
+    height: 70px;
+    right: 240px;
+    bottom: 40px;
+  }
+}

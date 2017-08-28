@@ -1,0 +1,32 @@
+<body class="welcomePage">
+  <div class="welcomeTop">
+    <h1 class="welcomeTop__title">
+      <%= image_tag 'hold-hands-logo.svg' %>
+    </h1>
+  </div>
+
+  <!-- flashメッセージを追加 -->
+  <div class="error-message-wrapper">
+    <% flash.each do |message_type, message| %>
+    <div class="error-message">
+      <%= message %>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="loginPage">
+    <%= form_for(:session, url: login_path) do |f| %>
+    <ul class="loginPage__inputs">
+      <li>
+        <%= f.email_field :email, :placeholder => "Eメール", :class => "loginPage__inside loginPage__inside--email" %>
+      </li>
+      <li>
+        <%= f.password_field :password, :placeholder => "パスワード", :class => "loginPage__inside loginPage__inside--password" %>
+      </li>
+        <%= f.submit "ログイン", class: "btn btn-primary loginBtn" %>
+      <p class="loginPage__forgot"><%= link_to "パスワードを忘れた方はこちら"%></p>
+    </ul>
+    <% end %>
+    <p class="loginPage__new"><%= link_to "新しく登録される方はこちら", signup_path %></p>
+  </div>
+</body>
