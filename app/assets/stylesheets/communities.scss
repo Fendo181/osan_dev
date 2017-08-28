@@ -62,7 +62,9 @@
 // コミュニティー一覧ページ
 .community-index {
   margin: 0 auto;
-  max-width: 800px;
+  @media (min-width: 1024px) {
+    max-width: 800px;
+  }
 }
 
 .communityHeader {
