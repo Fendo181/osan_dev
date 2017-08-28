@@ -13,10 +13,10 @@ delete '/logout',  to: 'sessions#destroy'
 
 # profile
 # get '/profile',  to: 'users#profile'
-get 'profiles/show'
-get 'profiles/edit'
-post 'profiles/update', to: 'profiles#update'
-get 'profiles/delete'
+# get 'profiles/show'
+# get 'profiles/edit'
+# post 'profiles/update', to: 'profiles#update'
+# get 'profiles/delete'
 
 # communities
 get '/communities', to: 'communities#index'
@@ -26,6 +26,6 @@ get 'communities/edit'
 get 'communities/updtae'
 get 'communities/delete'
 
-
+resources :profiles
 resources :users
 end
