@@ -3,16 +3,6 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  # def show
-  #   @user = User.find(params[:id])
-  #   @profile = Profile.find(user_id: @user.id)
-  # end
-
-  # def edit
-  #   @user = User.find(params[:id])
-  #   @profile = Profile.new(user_id:@user.id)
-  # end
-
   def create
     @user = User.new(user_params)
     if @user.save
