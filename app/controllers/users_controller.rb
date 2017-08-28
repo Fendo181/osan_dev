@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def new
     @user = User.new
+
   end
 
   def create
@@ -11,6 +12,7 @@ class UsersController < ApplicationController
       log_in @user
       # flash[:success] = "アカウント登録に成功しました!"
       #redirect_to @user
+      @profile = Profile.create(user_id:@user.id)
       redirect_to '/welcome'
     else
       render 'new'
