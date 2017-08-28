@@ -304,6 +304,11 @@ input[type="checkbox"].on-off:checked + ul{
   h2 {
     margin: 0;
     margin-bottom: 40px;
+    @media (min-width: 1024px) {
+      margin-bottom: 25px;
+      margin-top: -20px;
+      font-size: 22px;
+    }
   }
 }
 
