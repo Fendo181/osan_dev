@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     if @user.save
       #ユーザ登録が成功した時点でProfileも作成する
       @profile = Profile.new(user_id: @user.id).save
+      log_in @user
       # flash[:success] = "アカウント登録に成功しました!"
       #redirect_to @user
       redirect_to '/welcome'
