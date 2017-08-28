@@ -60,6 +60,11 @@
 }
 
 // コミュニティー一覧ページ
+.community-index {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
 .communityHeader {
   display: flex;
   position: relative;
@@ -67,6 +72,9 @@
   border-bottom: 0.3px solid #c9c9c9;
   margin-left: -10px;
   margin-right: -10px;
+  @media (min-width: 1024px) {
+    height: 100px;
+  }
 }
 
 .go-to-top {
@@ -77,6 +85,9 @@
   position: relative;
   top: 48px;
   left: 30px;
+  @media (min-width: 1024px) {
+    width: 180px;
+  }
   a {
     display: inline-block;
     height: 45px;
@@ -97,6 +108,13 @@ label.profileIcon__items {
   width: 90px;
   line-height: 90px;
   text-align: center;
+  @media (min-width: 1024px) {
+    width: 55px;
+    height: 55px;
+    top: 26px;
+    font-size: 10px;
+    line-height: 55px;
+  }
 }
 
 input[type="checkbox"].on-off{
@@ -120,6 +138,9 @@ input[type="checkbox"].on-off{
 .profileIcon li {
   font-size: 25px;
   text-align: center;
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
   a {
     text-decoration: none;
     color: #fff;
@@ -143,6 +164,10 @@ input[type="checkbox"].on-off:checked + ul{
   height: 114px;
   padding: 15px;
   margin-right: -20px;
+  @media (min-width: 1024px) {
+    height: 100px;
+    margin-top: -40px;
+  }
 }
 
 // 検索
@@ -166,6 +191,10 @@ input[type="checkbox"].on-off:checked + ul{
   border-bottom: 1px solid #c9c9c9;
   margin: 40px -10px 0;
   padding: 0 50px 40px;
+  @media (min-width: 1024px) {
+    margin: 20px -10px 0;
+    padding: 0 50px 20px;
+  }
 }
 
 .categories {
@@ -175,6 +204,9 @@ input[type="checkbox"].on-off:checked + ul{
 
 .category {
   font-size: 28px;
+  @media (min-width: 1024px) {
+    font-size: 20px;
+  }
   a {
     text-decoration: none;
     color: #5c5c5c;
@@ -187,6 +219,10 @@ input[type="checkbox"].on-off:checked + ul{
   position: absolute;
   top: 22px;
   right: 155px;
+  @media (min-width: 1024px) {
+    top: 30px;
+    right: 120px;
+  }
 }
 
 .icon-search-container {
@@ -198,6 +234,10 @@ input[type="checkbox"].on-off:checked + ul{
   position: relative;
   transition: width 0.2s ease-out;
   backface-visibility: hidden;
+  @media (min-width: 1024px) {
+    height: 45px;
+    width: 270px;
+  }
 
   &.active {
     width: 285px;
@@ -217,6 +257,10 @@ input[type="checkbox"].on-off:checked + ul{
     top: 17px;
     left: 20px;
     cursor: pointer;
+    @media (min-width: 1024px) {
+      font-size: 28px;
+      top: 8px;
+    }
   }
   .fa-times-circle {
     opacity: 0;
@@ -242,6 +286,12 @@ input[type="checkbox"].on-off:checked + ul{
     line-height: 20px;
     background-color: rgba(255, 255, 255, 0);
     transition: width 0.2s ease-out;
+    @media (min-width: 1024px) {
+      font-size: 18px;
+      top: 8px;
+      left: 55px;
+      width: 190px;
+    }
   }
 
 }
@@ -264,6 +314,10 @@ input[type="checkbox"].on-off:checked + ul{
   margin-bottom: 50px;
   h3 {
     font-size: 24px;
+    @media (min-width: 1024px) {
+      font-size: 16px;
+      margin: 10px 0;
+    }
   }
 }
 
@@ -272,6 +326,10 @@ input[type="checkbox"].on-off:checked + ul{
   height: 270px;
   background: gray;
   border-radius: 5px;
+  @media (min-width: 1024px) {
+    width: 318px;
+    height: 200px;
+  }
 }
 
 .community:nth-child(odd) {
@@ -286,4 +344,10 @@ input[type="checkbox"].on-off:checked + ul{
   position: fixed;
   bottom: 60px;
   right: 40px;
+  @media (min-width: 1024px) {
+    width: 90px;
+    height: 90px;
+    right: 240px;
+    bottom: 40px;
+  }
 }
