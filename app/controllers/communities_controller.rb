@@ -4,17 +4,48 @@ class CommunitiesController < ApplicationController
   end
 
   def new
+    @community = Community.new
   end
 
   def show
+    # @community = findcurrent_user.communities.build(community_params)
+    @community = Community.find(params[:id])
+  end
+
+  def create
+    #ユーザに紐付いてコミュニティを作成する。
+    @community = current_user.communities.build(community_params)
+    if @community.save
+      #ユーザ登録が成功した時点で@community_commnetも作成する
+      # @profile = Profile.new(user_id: @user.id).save
+      redirect_to @community
+    else
+      render 'delete'
+    end
   end
 
   def edit
+    @community = current_user.communities.find_by(params[:id])
   end
 
-  def updtae
+  def update
+    @community = current_user.communities.find_by(params[:id])
+    if @community.update_attributes(community_params)
+    #登録成功時の処理
+      redirect_to @community
+    else
+      render 'index'
+    end
   end
 
   def delete
   end
+
+  private
+
+    def community_params
+      params.require(:community).permit(:name, :content, :category,
+                                   :admin_allowed)
+    end
+
 end
