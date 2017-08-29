@@ -9,8 +9,6 @@
   background-size: cover;
   background-position: 30%;
   background-attachment: fixed;
-  position: relative;
-  height: 100vh;
   @media (min-width: 1024px) {
     background-image: image-url("welcome1.jpeg");
   }
@@ -33,6 +31,7 @@
   color: #fff;
   @media (min-width: 1024px) {
     font-size: 28px;
+    color: #000;
   }
 }
 
@@ -45,10 +44,7 @@
   color: #fff;
   height: 110px;
   line-height: 110px;
-  // margin-top: 90%;
-  position: absolute;
-  bottom: 300px;
-  right: 100px;
+  margin-top: 90%;
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
@@ -57,7 +53,6 @@
     width: 385px;
     height: 55px;
     line-height: 55px;
-    margin-top: 25px;
     margin-top: 100px;
   }
 }
@@ -68,6 +63,8 @@
 .intro__toCommunity a{
   text-decoration: none;
   color: #fff;
+  display: inline-block;
+  width: 100%;
 }
 
 // コミュニティー一覧ページ
