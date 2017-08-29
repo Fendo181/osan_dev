@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20170829031057) do
   create_table "communities", force: :cascade do |t|
     t.string "name"
     t.text "content"
-    t.string "caregory"
+    t.string "category"
     t.boolean "admin_allowed", default: false, null: false
     t.integer "user_id"
     t.datetime "created_at", null: false

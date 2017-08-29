@@ -44,7 +44,7 @@ class CommunitiesController < ApplicationController
   private
 
     def community_params
-      params.require(:community).permit(:name, :content, :caregory,
+      params.require(:community).permit(:name, :content, :category,
                                    :admin_allowed)
     end
 
