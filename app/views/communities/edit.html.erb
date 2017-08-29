@@ -6,12 +6,15 @@
     <ul>
       <li class="">
         <%# ここは編集しない。 %>
-        <%= f.label :name,"設立者", class: "" %>
         <%= @community.user.name %>
       </li>
       <li class="">
         <%= f.label :name,"コミュニティ名", class: "" %>
         <%= f.text_field :name, class: ""%>
+      </li>
+      <li class="">
+        <%= f.label :category,"カテゴリ", class: "" %>
+        <%= f.select :category, [ ["すべて", "すべて"], ["アクセサリー", "アクセサリー"], ["ファッション", "ファッション"], ["雑貨", "雑化"], ["素材","素材"] ] %>
       </li>
       <li class="">
         <%= f.label :content,"コミュニティの説明", class: "" %>
