@@ -16,6 +16,7 @@ delete '/logout',  to: 'sessions#destroy'
 # communities
 get '/communities', to: 'communities#index'
 
+resources :events
 resources :communities
 resources :profiles
 resources :users
