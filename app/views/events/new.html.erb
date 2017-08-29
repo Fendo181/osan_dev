@@ -3,7 +3,7 @@
 
 
 <div class="">
-  <%= form_for(@event) do |f| %>
+  <%= form_for(@event, url: events_community_path) do |f| %>
 
   <ul class="">
     <li>
@@ -26,8 +26,6 @@
       <%= f.label :content,"イベント詳細", class: "" %>
       <%= f.text_field :content, :class => "" %>
     </li>
-
-
     <%= f.submit "イベントを作成する", class: ""%>
   </ul>
   <% end %>

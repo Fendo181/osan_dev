@@ -18,11 +18,12 @@ get '/communities', to: 'communities#index'
 
 resources :communities do
   get 'events', on: :member, to: 'events#new'
+  post 'events', on: :member, to: 'events#create'
 end
 
 # eventsのidを取得する。
 
-resources :events, except: [:new]
+resources :events, except: [:new, :create]
 resources :profiles
 resources :users
 end
