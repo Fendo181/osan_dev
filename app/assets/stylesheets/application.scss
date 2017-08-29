@@ -30,6 +30,10 @@ input:focus {
   outline: none;
 }
 
+* {
+-webkit-appearance: none;
+}
+
 // ウェルカム画面
 .welcomePage {
   background-image: image-url("top8.jpeg");

@@ -44,7 +44,7 @@
   color: #fff;
   height: 110px;
   line-height: 110px;
-  margin-top: 90%;
+  margin-top: 70%;
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
@@ -379,18 +379,29 @@ input[type="checkbox"].on-off:checked + ul{
   text-align: center;
   font-weight: normal;
   font-size: 45px;
+  @media (min-width: 1024px) {
+    font-size: 30px;
+  }
+
 }
 
 .community-new-items {
   margin: 0 auto;
   width: 800px;
   margin-bottom: 60px;
+  @media (min-width: 1024px) {
+    width: 450px;
+  }
 }
 
 .communityNew-name {
   font-size: 30px;
   color: #fff;
   margin-bottom: 10px;
+  margin-left: -10px;
+  @media (min-width: 1024px) {
+    font-size: 20px;
+  }
 }
 
 .communityNew-name-text {
@@ -403,14 +414,23 @@ input[type="checkbox"].on-off:checked + ul{
   border-style: none;
   font-size: 27px;
   padding-left: 20px;
-  margin-left: -20px;
+  margin-left: -10px;
   line-height: 1.4;
+  @media (min-width: 1024px) {
+    width: 450px;
+    height: 40px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
 }
 
 .community-intro {
   height: 270px;
   font-size: 30px;
   line-height: 1.4;
+  @media (min-width: 1024px) {
+    font-size: 20px;
+  }
 }
 
 .communityNew-category-choose {
@@ -421,11 +441,19 @@ input[type="checkbox"].on-off:checked + ul{
   background: #fff;
   height: 400px;
   margin-bottom: 50px;
+  @media (min-width: 1024px) {
+    width: 475px;
+    height: 250px;
+    margin: 0 auto 50px;
+  }
 }
 
 .choose-open-close {
   font-size: 27px;
   color: #fff;
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
 }
 
 .open-cose-btn {
@@ -444,26 +472,37 @@ input[type="radio"] {
 
 p.chose {
   margin-bottom: 20px;
+  margin: 0 auto 30px;
 }
 
 #commu {
   display: block;
   margin: 0 auto;
   width: 820px;
+  @media (min-width: 1024px) {
+    width: 470px;
+  }
 }
 
 #community_category {
   font-size: 15px;
   width: 820px;
   height: 60px;
-  margin-left: -20px;
+  margin-left: -10px;
   background-color: #fff;
+  @media (min-width: 1024px) {
+    height: 50px;
+    width: 470px;
+  }
 }
 
 .commu-intro {
   height: 400px;
   padding: 14px;
   font-size: 14px;
+  @media (min-width: 1024px) {
+    height: 200px;
+  }
 }
 
 // コミュニティーページ
