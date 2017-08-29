@@ -368,6 +368,13 @@ input[type="checkbox"].on-off:checked + ul{
 }
 
 // コミュニティ作成
+.communityBody {
+  @media (min-width: 1024px) {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
 .community-new {
   background-color: #ff8372;
 }
@@ -509,13 +516,23 @@ p.chose {
 
 .commu-photo {
   background: gray;
+  @media (min-width: 1024px){
+    margin-top: 30px;
+  }
 }
 .community-show {
   padding: 0 60px 60px;
+  @media (min-width: 1024px) {
+    padding: 0 100px;
+  }
 }
 .community-show-name {
   font-size: 50px;
   margin-bottom: 80px;
+  @media (min-width: 1024px) {
+    font-size: 30px;
+    text-align: center;
+  }
 }
 
 .community-show-title {
@@ -523,11 +540,17 @@ p.chose {
   font-size: 37px;
   border-bottom: 1px solid #c9c9c9;
   padding-bottom: 15px;
+  @media (min-width: 1024px) {
+    font-size: 27px;
+  }
 }
 
 .community-show-text {
   font-size: 30px;
   margin: -10px 0 90px 0;
+  @media (min-width: 1024px) {
+    font-size: 22px;
+  }
 }
 
 .create-event {
@@ -538,4 +561,9 @@ p.chose {
   text-align: center;
   line-height: 300px;
   font-size: 20px;
+  @media (min-width: 1024px) {
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+  }
 }
