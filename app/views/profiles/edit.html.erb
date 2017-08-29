@@ -24,6 +24,11 @@
         <%= f.label :hp,"ホームページ", class: "profileForm__textFieldTitle" %>
         <%= f.text_field :hp, class: "profileForm__textField", placeholder: "ご自身のギャラリーページなど" %>
       </li>
+
+      <li class="profileForm__list">
+        <%= f.label :text,"自己紹介", class: "profileForm__textFieldTitle" %>
+        <%= f.text_area :content, class: "profileForm__textField profileForm__textField--intro" %>
+      </li>
       <p class="profileForm__snsP">以下、SNSのアカウント名を入力してください。</p>
       <ul class="profileForm__snsLists">
         <li class="profileForm__snsList profileForm__snsListB">
@@ -35,11 +40,6 @@
           <%= f.text_field :insta_id, class: "profileForm__snsTextField"%>
         </li>
       </ul>
-
-      <li class="profileForm__list">
-        <%= f.label :text,"自己紹介", class: "profileForm__textFieldTitle" %>
-        <%= f.text_area :content, class: "profileForm__textField profileForm__textField--intro" %>
-      </li>
       <%= f.submit "完了!", class: "profileForm__submit" %>
     </ul>
     <% end %>
