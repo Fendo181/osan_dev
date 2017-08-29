@@ -28,7 +28,14 @@ class CommunitiesController < ApplicationController
     @community = current_user.communities.find_by(params[:id])
   end
 
-  def updtae
+  def update
+    @community = current_user.communities.find_by(params[:id])
+    if @community.update_attributes(community_params)
+    #登録成功時の処理
+      redirect_to @community
+    else
+      render 'index'
+    end
   end
 
   def delete
