@@ -1,2 +1,23 @@
-<h1>Communities#show</h1>
-<p>Find me in app/views/communities/show.html.erb</p>
+<% provide(:title,@community.name) %>
+
+<p>写真的な何かがある</p>
+
+<h2>コミュニティ名:<%= @community.name %> </h2>
+
+<h2>設立者</h2>
+<p><%= @community.user.name %><p>
+
+<h3>カテゴリ</h3>
+<p><%= @community.category %><p>
+
+<h2>このコミュニティについて</h2>
+<p><%= @community.content %></p>
+
+
+<h2>開催イベント</h2>
+<p>イベントを追加する</p>
+<%= link_to "イベントを作成する。", new_community_path, class: "" %>
+
+
+<h2>管理者しか編集できないボタン。</h2>
+<%= link_to "コミュニティを編集する", edit_community_path(@community.id),class: "" %>

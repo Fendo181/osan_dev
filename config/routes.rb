@@ -6,7 +6,7 @@ get '/welcome', to: 'static_pages#welcome'
 
 # users
 get '/signup',  to: 'users#new'
-post '/signup',  to: 'users#create'
+post '/signup', to: 'users#create'
 
 # session
 get    '/login',   to: 'sessions#new'

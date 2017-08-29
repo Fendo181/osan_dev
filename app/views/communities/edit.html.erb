@@ -1,2 +1,27 @@
-<h1>Communities#edit</h1>
-<p>Find me in app/views/communities/edit.html.erb</p>
+<% provide(:title, @community.user.name) %>
+
+<body class="">
+  <div>
+    <%= form_for(@community) do |f| %>
+    <ul>
+      <li class="">
+        <%# ここは編集しない。 %>
+        <%= @community.user.name %>
+      </li>
+      <li class="">
+        <%= f.label :name,"コミュニティ名", class: "" %>
+        <%= f.text_field :name, class: ""%>
+      </li>
+      <li class="">
+        <%= f.label :category,"カテゴリ", class: "" %>
+        <%= f.select :category, [ ["すべて", "すべて"], ["アクセサリー", "アクセサリー"], ["ファッション", "ファッション"], ["雑貨", "雑化"], ["素材","素材"] ] %>
+      </li>
+      <li class="">
+        <%= f.label :content,"コミュニティの説明", class: "" %>
+        <%= f.text_field :content, class: ""%>
+      </li>
+      <%= f.submit "編集完了!", class: "" %>
+    </ul>
+    <% end %>
+  </div>
+</body>
