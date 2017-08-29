@@ -1,0 +1,38 @@
+<body class="">
+  <div>
+    <%= form_for(@event) do |f| %>
+    <ul>
+      <li class="">
+        <%# ここは編集しない。 %>
+        <%= @event.user.name %>
+      </li>
+      <li class="">
+        <%= f.label :name,"イベント名", class: "" %>
+        <%= f.text_field :name, class: ""%>
+      </li>
+      <li class="">
+        <ul>
+          <p>詳細</p>
+            <li>
+              <%= f.label :date,"開催日時", class: "" %>
+              <%= f.datetime_select :date, class: ""%>
+            </li>
+            <li>
+              <%= f.label :location,"開催場所", class: "" %>
+              <%= f.text_field :location, class: ""%>
+            </li>
+            <li>
+              <%= f.label :money,"費用", class: "" %>
+              <%= f.text_field :money, class: ""%>
+            </li>
+        </ul>
+      </li>
+      <li class="">
+        <%= f.label :content,"このイベントについて", class: "" %>
+        <%= f.text_area :content, class: ""%>
+      </li>
+      <%= f.submit "編集完了!", class: "" %>
+    </ul>
+    <% end %>
+  </div>
+</body>

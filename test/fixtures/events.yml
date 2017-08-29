@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  date: 2017-08-29 18:43:21
+  location: MyString
+  money: MyString
+  content: MyText
+  user: one
+  community: one
+
+two:
+  name: MyString
+  date: 2017-08-29 18:43:21
+  location: MyString
+  money: MyString
+  content: MyText
+  user: two
+  community: two

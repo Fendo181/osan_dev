@@ -50,6 +50,8 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'sqlite3', '1.3.11'
+  gem 'pry-rails'
+  gem 'pry-byebug'
 end
 
 group :development do
