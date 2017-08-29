@@ -12,11 +12,15 @@ class EventsController < ApplicationController
 
   def create
     @community = current_user.communities.find(params[:id])
+    @event = current_user.events.build(event_params)
+    @event.community_id = @community.id
+
+    # binding.pry
     #ユーザidとコミュニティidに紐付いてコミュニティを作成する。
     if @event.save
       #ユーザ登録が成功した時点で@community_commnetも作成する
       # @profile = Profile.new(user_id: @user.id).save
-      redirect_to 'show'
+      redirect_to @event
     else
       render 'delete'
     end
@@ -29,9 +33,9 @@ class EventsController < ApplicationController
   end
 
   private
-  def event_params
-    params.require(:event).permit(:name, :date, :location,
-                                    :money, :content)
-  end
+    def event_params
+      params.require(:event).permit(:name, :date, :location,
+                                      :money, :content)
+    end
 
 end
