@@ -20,11 +20,12 @@ class CommunitiesController < ApplicationController
       # @profile = Profile.new(user_id: @user.id).save
       redirect_to @community
     else
-      render 'edit'
+      render 'delete'
     end
   end
 
   def edit
+    @community = current_user.communities.find_by(params[:id])
   end
 
   def updtae
