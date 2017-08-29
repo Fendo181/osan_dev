@@ -4,17 +4,30 @@ class EventsController < ApplicationController
     @event = Event.new
   end
 
-  def edit
+  def show
+    @event = Event.find(params[:id])
   end
 
+
+  def edit
+    @event = Event.find(params[:id])
+  end
+
+
   def update
+    @event = Event.find(params[:id])
+    if @event.update_attributes(event_params)
+      #登録成功時の処理
+      redirect_to @event
+    else
+      redirect_to 'edit'
+    end
   end
 
   def create
     @community = current_user.communities.find(params[:id])
     @event = current_user.events.build(event_params)
     @event.community_id = @community.id
-
     # binding.pry
     #ユーザidとコミュニティidに紐付いてコミュニティを作成する。
     if @event.save
@@ -27,9 +40,6 @@ class EventsController < ApplicationController
   end
 
   def delete
-  end
-
-  def show
   end
 
   private
