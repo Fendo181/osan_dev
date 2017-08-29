@@ -1,3 +1,132 @@
 // Place all the styles related to the Profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.profileEdit {
+  @media (min-width: 1024px) {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.profile-header {
+  height: 150px;
+  border-bottom: 0.3px solid #c9c9c9;
+  margin-left: -10px;
+  margin-right: -10px;
+  position: relative;
+  @media (min-width: 1024px) {
+    height: 100px;
+  }
+  > a {
+    position: absolute;
+    right: 44px;
+    top: 30px;
+    font-size: 55px;
+    text-decoration: none;
+    color: #ff8372;
+    @media (min-width: 1024px) {
+      font-size: 40px;
+    }
+  }
+}
+
+.go-to-top2 {
+  background-image: image-url("hold-hands2.svg");
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 45px;
+  position: relative;
+  top: 48px;
+  left: 30px;
+  @media (min-width: 1024px) {
+    width: 180px;
+  }
+  .to-top {
+    display: inline-block;
+    height: 45px;
+    width: 100%
+  }
+}
+
+.profilePic {
+  width: 220px;
+  height: 220px;
+  background: #ff8372;
+  border-radius: 220px;
+  text-align: center;
+  line-height: 220px;
+  margin: 50px auto 20px;
+  font-size: 50px;
+  color: #fff;
+}
+
+.userName {
+  font-size: 40px;
+  text-align: center;
+  @media (min-width: 1024px) {
+    font-size: 30px;
+  }
+}
+
+.profile-items {
+  margin-top: 50px;
+}
+
+.profile-item {
+  margin-bottom: 60px;
+}
+
+.profileTitle {
+  font-weight: normal;
+  border-bottom: 1px solid #c9c9c9;
+  font-size: 35px;
+  margin: 0 auto;
+  width: 800px;
+  line-height: 2.5;
+  @media (min-width: 1024px) {
+    font-size: 28px;
+  }
+}
+
+.profileText {
+  font-size: 30px;
+  width: 800px;
+  margin: 15px auto 0;
+  @media (min-width: 1024px) {
+    font-size: 23px;
+  }
+  a {
+    color: #2d81ff;
+    }
+}
+
+.sns-icons {
+  display: flex;
+  margin-left: 80px;
+  @media (min-width: 1024px) {
+    margin-left: 0px;
+  }
+}
+
+.sns-icon {
+  margin-right: 80px;
+  a {
+    font-size: 70px;
+    text-decoration: none;
+    @media (min-width: 1024px) {
+      font-size: 40px;
+    }
+  }
+}
+
+.twitter {
+  a {
+    color: #76BEFA;
+  }
+}
+
+.insta {
+  a {
+    color: #CA72F1;
+  }
+}

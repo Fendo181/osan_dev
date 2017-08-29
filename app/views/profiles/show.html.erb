@@ -1,63 +1,64 @@
 <% provide(:title, @profile.user.name) %>
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body class="profile">
+  <div class="profileEdit">
+    <div class="profile-header">
+      <h1 class="go-to-top2">
+        <%= link_to '', communities_path, class: 'to-top' %>
+      </h1>
+      <%= link_to(content_tag(:i, '', class: 'fa fa-pencil'), edit_profile_path) %>
+    </div>
+    <!-- <li> -->
+      <!-- <div class="profileForm__picWindow">+</div> -->
+      <!-- <label for="pic-choose-btn" class="pic-choose-label">
+        <svg id="レイヤー_1" class="plus-svg" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169 169"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:5px;}</style></defs><title>plus</title><line class="cls-1" y1="84.5" x2="169" y2="84.5"/><line class="cls-1" x1="84.5" x2="84.5" y2="169"/></svg>
+      </label> -->
+    <!-- </li> -->
+    <div class="profilePic">顔</div>
+    <div class="userName">
+      <%= @profile.user.name %>
+    </div>
 
-<body class="profileForm">
-  <div>
-    <ul class="profileForm__lists">
-      <li class="profileForm__list">
-        <!-- <div class="profileForm__picWindow">+</div> -->
-        <label for="pic-choose-btn" class="pic-choose-label">
-          <svg id="レイヤー_1" class="plus-svg" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169 169"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:5px;}</style></defs><title>plus</title><line class="cls-1" y1="84.5" x2="169" y2="84.5"/><line class="cls-1" x1="84.5" x2="84.5" y2="169"/></svg>
-        </label>
-      </li>
-      <p>ここは何らかの画像が入る予定です。</p>
-      <li class="profileForm__list">
-        <label class="profileForm__textFieldTitle">ユーザネーム</label>
-        <%= @profile.user.name %>
-      </li>
-
-      <li class="profileForm__list">
-        <label class="profileForm__textFieldTitle">ギャラリーネーム</label>
+    <ul class="profile-items">
+      <li class="gallery_name profile-item">
+        <h2 class="profileTitle">ギャラリーネーム</h2>
         <% if @profile.gallery_name? %>
-          <%= @profile.gallery_name %>
+          <p class="profileText"><%= @profile.gallery_name %></p>
         <% else %>
-          <p>まだ入力されてません</p>
+          <p class="profileText">まだ入力されてません</p>
         <% end %>
       </li>
-
-      <li class="profileForm__list">
-        <label class="profileForm__textFieldTitle">ホームページ</label>
+      <li class="introduction profile-item">
+        <h2 class="profileTitle">自己紹介</h2>
+        <% if  @profile.content? %>
+          <p class="profileText"><%= @profile.content %></p>
+        <% else %>
+          <p class="profileText">まだ入力されてません</p>
+        <% end %>
+      </li>
+      <li class="homepage profile-item">
+        <h2 class="profileTitle">ホームページ</h2>
         <% if  @profile.hp? %>
-          <%= @profile.hp %>
+          <p class="profileText"><a href="<%= @profile.hp %>"><%= @profile.hp %></a></p>
         <% else %>
-          <p>まだ入力されてません</p>
+          <p class="profileText">まだ入力されてません</p>
         <% end %>
       </li>
+    </ul>
 
-      <p class="profileForm__snsP">SNSのアカウント</p>
-      <ul class="profileForm__snsLists">
-        <li class="profileForm__snsList profileForm__snsListB">
-          <label class="profileForm__sns">Twitter</label>
+      <ul class="sns-icons">
+        <li class="sns-icon twitter">
             <% if  @profile.tw_id? %>
-            <a href="https://twitter.com/<%= @profile.tw_id %>">@<%= @profile.tw_id %></a>
+            <a href="https://twitter.com/<%= @profile.tw_id %>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
             <% end %>
         </li>
-        <li class="profileForm__snsListB">
-          <label class="profileForm__sns">Instagram</label>
+        <li class="sns-icon insta">
             <% if  @profile.insta_id? %>
-            <a href="https://www.instagram.com/<%= @profile.tw_id %>">@<%= @profile.insta_id %></a>
+            <a href="https://www.instagram.com/<%= @profile.tw_id %>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
             <% end %>
         </li>
       </ul>
-
-      <li class="profileForm__list">
-        <label class="profileForm__textFieldTitle">自己紹介</label>
-        <% if  @profile.content? %>
-          <%= @profile.content %>
-        <% else %>
-          <p>まだ入力されてません</p>
-        <% end %>
-      </li>
-      <%= link_to "プロフィールを編集する", edit_profile_path(@profile.user.id),class: "profileForm__submit" %>
-    </ul>
   </div>
 </body>
