@@ -1,2 +1,7 @@
-<h1>Communities#show</h1>
-<p>Find me in app/views/communities/show.html.erb</p>
+<% provide(:title,@community.name) %>
+
+<h2>コミュニティ</h2>
+<h2><%= @community.name %></h2>
+
+<h2>コミュニティ管理者</h2>
+<h2><%= @community.user.name %></h2>
