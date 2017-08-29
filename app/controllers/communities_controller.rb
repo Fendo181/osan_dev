@@ -25,11 +25,11 @@ class CommunitiesController < ApplicationController
   end
 
   def edit
-    @community = current_user.communities.find_by(params[:id])
+    @community = current_user.communities.find(params[:id])
   end
 
   def update
-    @community = current_user.communities.find_by(params[:id])
+    @community = current_user.communities.find(params[:id])
     if @community.update_attributes(community_params)
     #登録成功時の処理
       redirect_to @community
