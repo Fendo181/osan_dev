@@ -30,21 +30,8 @@ input:focus {
   outline: none;
 }
 
-input[type="submit"] {
-  -webkit-appearance: none;
-  border-radius: 0;
-}
-
-input[type="text"] {
-  font-size: 33px;
-}
-
-input[type="email"] {
-  font-size: 33px;
-}
-
-input[type="password"] {
-  font-size: 33px;
+* {
+-webkit-appearance: none;
 }
 
 // ウェルカム画面

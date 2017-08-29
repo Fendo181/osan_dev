@@ -1,23 +1,33 @@
 <% provide(:title,@community.name) %>
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
 
-<p>写真的な何かがある</p>
+<body class="communityBody">
+  <div class="profile-header">
+    <h1 class="go-to-top">
+      <%= link_to '', communities_path, class: 'to-top' %>
+    </h1>
+    <%= link_to edit_community_path(@community.id) do %>
+      <i class="fa fa-pencil"></i>
+    <% end %>
+  </div>
 
-<h2>コミュニティ名:<%= @community.name %> </h2>
+  <div class="choose-photo commu-photo">写真</div>
 
-<h2>設立者</h2>
-<p><%= @community.user.name %><p>
+  <div class="community-show">
+    <h2 class="community-show-name">コミュニティ名<%= @community.name %> </h2>
 
-<h3>カテゴリ</h3>
-<p><%= @community.category %><p>
+    <h3 class="community-show-title">設立者</h3>
+    <p class="community-show-text"><%= @community.user.name %><p>
 
-<h2>このコミュニティについて</h2>
-<p><%= @community.content %></p>
+    <h3 class="community-show-title">カテゴリ</h3>
+    <p class="community-show-text"><%= @community.category %><p>
 
+    <h3 class="community-show-title">このコミュニティについて</h3>
+    <p class="community-show-text"><%= @community.content %></p>
 
-<h2>開催イベント</h2>
-<p>イベントを追加する</p>
-<%= link_to "イベントを作成する。",  events_community_path, class: "" %>
-
-
-<h2>管理者しか編集できないボタン。</h2>
-<%= link_to "コミュニティを編集する", edit_community_path(@community.id),class: "" %>
+    <h3 class="community-show-title">開催イベント</h3>
+    <%= link_to "イベントを作成", new_community_path, class: "create-event" %>
+  </div>
+</body>

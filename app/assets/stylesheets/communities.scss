@@ -9,8 +9,6 @@
   background-size: cover;
   background-position: 30%;
   background-attachment: fixed;
-  position: relative;
-  height: 100vh;
   @media (min-width: 1024px) {
     background-image: image-url("welcome1.jpeg");
   }
@@ -33,6 +31,7 @@
   color: #fff;
   @media (min-width: 1024px) {
     font-size: 28px;
+    color: #000;
   }
 }
 
@@ -45,10 +44,7 @@
   color: #fff;
   height: 110px;
   line-height: 110px;
-  // margin-top: 90%;
-  position: absolute;
-  bottom: 300px;
-  right: 100px;
+  margin-top: 70%;
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
@@ -57,7 +53,6 @@
     width: 385px;
     height: 55px;
     line-height: 55px;
-    margin-top: 25px;
     margin-top: 100px;
   }
 }
@@ -68,6 +63,8 @@
 .intro__toCommunity a{
   text-decoration: none;
   color: #fff;
+  display: inline-block;
+  width: 100%;
 }
 
 // コミュニティー一覧ページ
@@ -367,5 +364,206 @@ input[type="checkbox"].on-off:checked + ul{
     height: 70px;
     right: 240px;
     bottom: 40px;
+  }
+}
+
+// コミュニティ作成
+.communityBody {
+  @media (min-width: 1024px) {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.community-new {
+  background-color: #ff8372;
+}
+
+.community-new-title {
+  color: #fff;
+  padding: 60px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: normal;
+  font-size: 45px;
+  @media (min-width: 1024px) {
+    font-size: 30px;
+  }
+
+}
+
+.community-new-items {
+  margin: 0 auto;
+  width: 800px;
+  margin-bottom: 60px;
+  @media (min-width: 1024px) {
+    width: 450px;
+  }
+}
+
+.communityNew-name {
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 10px;
+  margin-left: -10px;
+  @media (min-width: 1024px) {
+    font-size: 20px;
+  }
+}
+
+.communityNew-name-text {
+  display: block;
+  width: 800px;
+  height: 90px;
+  font-size: 28px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border-style: none;
+  font-size: 27px;
+  padding-left: 20px;
+  margin-left: -10px;
+  line-height: 1.4;
+  @media (min-width: 1024px) {
+    width: 450px;
+    height: 40px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+.community-intro {
+  height: 270px;
+  font-size: 30px;
+  line-height: 1.4;
+  @media (min-width: 1024px) {
+    font-size: 20px;
+  }
+}
+
+.communityNew-category-choose {
+  display: block;
+}
+
+.choose-photo {
+  background: #fff;
+  height: 400px;
+  margin-bottom: 50px;
+  @media (min-width: 1024px) {
+    width: 475px;
+    height: 250px;
+    margin: 0 auto 50px;
+  }
+}
+
+.choose-open-close {
+  font-size: 27px;
+  color: #fff;
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
+}
+
+.open-cose-btn {
+  width: 20px;
+  height: 20px;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
+
+.close {
+  margin-top: -30px;
+}
+
+p.chose {
+  margin-bottom: 20px;
+  margin: 0 auto 30px;
+}
+
+#commu {
+  display: block;
+  margin: 0 auto;
+  width: 820px;
+  @media (min-width: 1024px) {
+    width: 470px;
+  }
+}
+
+#community_category {
+  font-size: 15px;
+  width: 820px;
+  height: 60px;
+  margin-left: -10px;
+  background-color: #fff;
+  @media (min-width: 1024px) {
+    height: 50px;
+    width: 470px;
+  }
+}
+
+.commu-intro {
+  height: 400px;
+  padding: 14px;
+  font-size: 14px;
+  @media (min-width: 1024px) {
+    height: 200px;
+  }
+}
+
+// コミュニティーページ
+
+.commu-photo {
+  background: gray;
+  @media (min-width: 1024px){
+    margin-top: 30px;
+  }
+}
+.community-show {
+  padding: 0 60px 60px;
+  @media (min-width: 1024px) {
+    padding: 0 100px;
+  }
+}
+.community-show-name {
+  font-size: 50px;
+  margin-bottom: 80px;
+  @media (min-width: 1024px) {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+.community-show-title {
+  font-weight: normal;
+  font-size: 37px;
+  border-bottom: 1px solid #c9c9c9;
+  padding-bottom: 15px;
+  @media (min-width: 1024px) {
+    font-size: 27px;
+  }
+}
+
+.community-show-text {
+  font-size: 30px;
+  margin: -10px 0 90px 0;
+  @media (min-width: 1024px) {
+    font-size: 22px;
+  }
+}
+
+.create-event {
+  width: 300px;
+  height: 300px;
+  background: #c9c9c9;
+  display: inline-block;
+  text-align: center;
+  line-height: 300px;
+  font-size: 20px;
+  @media (min-width: 1024px) {
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
   }
 }
