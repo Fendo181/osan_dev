@@ -1,6 +1,6 @@
 <% provide(:title, "コミュニティ作成ページ") %>
 
-<body class="community">
+<body class="community-new">
   <h1 class="community-new-title">コミュニティ作成</h1>
 
   <div>
@@ -18,7 +18,7 @@
       </li>
       <li class="community-new-items">
         <%= f.label :content,"コミュニティの説明", class: "communityNew-name community-intro" %>
-        <%= f.text_area :content, :class => "communityNew-name-text" %>
+        <%= f.text_area :content, :class => "communityNew-name-text commu-intro" %>
       </li>
       <p class="communityNew-name community-new-items chose">以下どちらかを選択して下さい。</p>
       <li class="community-new-items">

@@ -368,7 +368,7 @@ input[type="checkbox"].on-off:checked + ul{
 }
 
 // コミュニティ作成
-.community {
+.community-new {
   background-color: #ff8372;
 }
 
@@ -409,8 +409,7 @@ input[type="checkbox"].on-off:checked + ul{
 
 .community-intro {
   height: 270px;
-  font-size: 16px;
-  padding: 20px;
+  font-size: 30px;
   line-height: 1.4;
 }
 
@@ -450,7 +449,7 @@ p.chose {
 #commu {
   display: block;
   margin: 0 auto;
-  width: 800px;
+  width: 820px;
 }
 
 #community_category {
@@ -459,4 +458,35 @@ p.chose {
   height: 60px;
   margin-left: -20px;
   background-color: #fff;
+}
+
+.commu-intro {
+  height: 400px;
+  padding: 14px;
+  font-size: 14px;
+}
+
+// コミュニティーページ
+
+.commu-photo {
+  background: gray;
+}
+.community-show {
+  padding: 0 60px 60px;
+}
+.community-show-name {
+  font-size: 50px;
+  margin-bottom: 80px;
+}
+
+.community-show-title {
+  font-weight: normal;
+  font-size: 37px;
+  border-bottom: 1px solid #c9c9c9;
+  padding-bottom: 15px;
+}
+
+.community-show-text {
+  font-size: 30px;
+  margin: -5px 0 90px 0;
 }
