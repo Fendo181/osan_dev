@@ -98,10 +98,26 @@ Migrationを実行してDBを作成する。
 rails db:migrate
 ```
 
+
+Seed(テストデータを作成)
+
+```
+rails db:migrate:reset
+rails db:migrate
+```
+
 後はosan_devのルートディレクトリで以下のコマンドを実行してアプリケーションサーバを立ち上げる
 
 ```
 rails s
+```
+
+
+herkuにあげる方法
+
+```
+git push heroku master
+heroku run rake db:migrate
 ```
 
 ブラウザに`localhost:3000`を叩いてページが表示できれば環境構築は終わりです。お疲れ様でした。
