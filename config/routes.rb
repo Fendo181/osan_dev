@@ -16,8 +16,13 @@ delete '/logout',  to: 'sessions#destroy'
 # communities
 get '/communities', to: 'communities#index'
 
-resources :events
-resources :communities
+resources :communities do
+  get 'events', on: :member, to: 'events#new'
+end
+
+# eventsのidを取得する。
+
+resources :events, except: [:new]
 resources :profiles
 resources :users
 end

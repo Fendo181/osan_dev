@@ -1,2 +1,34 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<p>イベント設立者:<%= @community.user.name %></p>
+<p>コミュニティ:<%= @community.name %></p>
+
+
+<div class="">
+  <%= form_for(@event) do |f| %>
+
+  <ul class="">
+    <li>
+      <%= f.label :name,"イベント名", class: "" %>
+      <%= f.text_area :name, :class => "" %>
+    </li>
+    <li>
+      <%= f.label :date,"開催日時", class: "" %>
+      <%= f.datetime_select :date, :class => "" %>
+    </li>
+    <li>
+      <%= f.label :location,"開催場所", class: "" %>
+      <%= f.text_area :location, :class => "" %>
+    </li>
+    <li>
+      <%= f.label :money,"費用", class: "" %>
+      <%= f.text_area :money, :class => "" %>
+    </li>
+    <li>
+      <%= f.label :content,"イベント詳細", class: "" %>
+      <%= f.text_field :content, :class => "" %>
+    </li>
+
+
+    <%= f.submit "イベントを作成する", class: ""%>
+  </ul>
+  <% end %>
+</div>
