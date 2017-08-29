@@ -24,7 +24,7 @@ class ProfilesController < ApplicationController
 
     def profile_params
       params.require(:profile).permit(:gallery_name, :hp, :tw_id,
-                                      :insta_id,:content)
+                                      :insta_id,:content, :picture)
     end
 
 end
