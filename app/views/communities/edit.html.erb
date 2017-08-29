@@ -21,6 +21,17 @@
         <%= f.label :content,"コミュニティの説明", class: "communityNew-name community-intro" %>
         <%= f.text_area :content, class: "communityNew-name-text commu-intro"%>
       </li>
+
+      <p class="communityNew-name community-new-items chose">以下どちらかを選択して下さい。</p>
+      <li class="community-new-items">
+          <%= f.radio_button :admin_allowed, false %>
+          <%= f.label :admin_allowed, "コミュニティメンバーであれば誰でもイベントを作れるようにする", class: "choose-open-close" %>
+      </li>
+      <li class="community-new-items close">
+          <%= f.radio_button :admin_allowed, true %>
+          <%= f.label :admin_allowed, "あなたしかイベントを作成できないようにする", class: "choose-open-close" %>
+      </li>
+      
       <%= f.submit "編集完了!", class: "profileForm__submit", id: "commu" %>
     </ul>
     <% end %>
