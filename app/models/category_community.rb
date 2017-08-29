@@ -1,0 +1,2 @@
+class CategoryCommunity < ApplicationRecord
+end
