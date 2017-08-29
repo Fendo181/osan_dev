@@ -30,6 +30,11 @@ input:focus {
   outline: none;
 }
 
+input[type="submit"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
 // ウェルカム画面
 .welcomePage {
   background-image: image-url("top8.jpeg");
