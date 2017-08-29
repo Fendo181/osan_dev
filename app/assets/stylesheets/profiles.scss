@@ -48,6 +48,11 @@
   }
 }
 
+.profilePad {
+  padding: 0 100px;
+  margin: 0 auto;
+}
+
 .profilePic {
   width: 220px;
   height: 220px;
@@ -58,6 +63,11 @@
   margin: 50px auto 20px;
   font-size: 50px;
   color: #fff;
+  @media (min-width: 1024px) {
+    width: 180px;
+    height: 180px;
+    line-height: 180px;
+  }
 }
 
 .userName {
@@ -84,7 +94,8 @@
   width: 800px;
   line-height: 2.5;
   @media (min-width: 1024px) {
-    font-size: 28px;
+    font-size: 27px;
+    width: 570px;
   }
 }
 
@@ -93,7 +104,8 @@
   width: 800px;
   margin: 15px auto 0;
   @media (min-width: 1024px) {
-    font-size: 23px;
+    font-size: 22px;
+    width: 570px;
   }
   a {
     color: #2d81ff;

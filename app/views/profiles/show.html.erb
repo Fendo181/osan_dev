@@ -21,44 +21,47 @@
       <%= @profile.user.name %>
     </div>
 
-    <ul class="profile-items">
-      <li class="gallery_name profile-item">
-        <h2 class="profileTitle">ギャラリーネーム</h2>
-        <% if @profile.gallery_name? %>
-          <p class="profileText"><%= @profile.gallery_name %></p>
-        <% else %>
-          <p class="profileText">まだ入力されてません</p>
-        <% end %>
-      </li>
-      <li class="introduction profile-item">
-        <h2 class="profileTitle">自己紹介</h2>
-        <% if  @profile.content? %>
-          <p class="profileText"><%= @profile.content %></p>
-        <% else %>
-          <p class="profileText">まだ入力されてません</p>
-        <% end %>
-      </li>
-      <li class="homepage profile-item">
-        <h2 class="profileTitle">ホームページ</h2>
-        <% if  @profile.hp? %>
-          <p class="profileText"><a href="<%= @profile.hp %>"><%= @profile.hp %></a></p>
-        <% else %>
-          <p class="profileText">まだ入力されてません</p>
-        <% end %>
-      </li>
-    </ul>
-
-      <ul class="sns-icons">
-        <li class="sns-icon twitter">
-            <% if  @profile.tw_id? %>
-            <a href="https://twitter.com/<%= @profile.tw_id %>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <% end %>
+    <div class="profilePad">
+      <ul class="profile-items">
+        <li class="gallery_name profile-item">
+          <h2 class="profileTitle">ギャラリーネーム</h2>
+          <% if @profile.gallery_name? %>
+            <p class="profileText"><%= @profile.gallery_name %></p>
+          <% else %>
+            <p class="profileText">まだ入力されてません</p>
+          <% end %>
         </li>
-        <li class="sns-icon insta">
-            <% if  @profile.insta_id? %>
-            <a href="https://www.instagram.com/<%= @profile.tw_id %>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            <% end %>
+        <li class="introduction profile-item">
+          <h2 class="profileTitle">自己紹介</h2>
+          <% if  @profile.content? %>
+            <p class="profileText"><%= @profile.content %></p>
+          <% else %>
+            <p class="profileText">まだ入力されてません</p>
+          <% end %>
+        </li>
+        <li class="homepage profile-item">
+          <h2 class="profileTitle">ホームページ</h2>
+          <% if  @profile.hp? %>
+            <p class="profileText"><a href="<%= @profile.hp %>"><%= @profile.hp %></a></p>
+          <% else %>
+            <p class="profileText">まだ入力されてません</p>
+          <% end %>
         </li>
       </ul>
+
+        <ul class="sns-icons">
+          <li class="sns-icon twitter">
+              <% if  @profile.tw_id? %>
+              <a href="https://twitter.com/<%= @profile.tw_id %>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <% end %>
+          </li>
+          <li class="sns-icon insta">
+              <% if  @profile.insta_id? %>
+              <a href="https://www.instagram.com/<%= @profile.tw_id %>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <% end %>
+          </li>
+        </ul>
+    </div>
+
   </div>
 </body>
