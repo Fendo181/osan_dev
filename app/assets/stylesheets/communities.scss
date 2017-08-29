@@ -30,6 +30,10 @@
   margin-top: 90px;
   font-size: 38px;
   line-height: 2.6;
+  color: #fff;
+  @media (min-width: 1024px) {
+    font-size: 28px;
+  }
 }
 
 .introBtn {
@@ -51,6 +55,7 @@
     height: 55px;
     line-height: 55px;
     margin-top: 25px;
+    margin-top: 100px;
   }
 }
 .introBtn:hover {
