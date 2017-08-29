@@ -22,7 +22,7 @@
       </li>
       <p class="communityNew-name community-new-items chose">以下どちらかを選択して下さい。</p>
       <li class="community-new-items">
-          <%= f.radio_button :admin_allowed, false , checked: "checked"%>
+          <%= f.radio_button :admin_allowed, false , checked: true%>
           <%= f.label :admin_allowed, "コミュニティメンバーであれば誰でもイベントを作れるようにする", class: "choose-open-close" %>
       </li>
       <li class="community-new-items close">
