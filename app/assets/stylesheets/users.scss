@@ -207,7 +207,8 @@ label.pic-choose-label {
 }
 
 .profileForm__snsList {
-  margin-right: 9%;
+  margin-right: 37px;
+  width: 50%;
   @media (min-width: 1024px) {
     margin-right: 18px;
   }
@@ -228,7 +229,7 @@ label.pic-choose-label {
 .profileForm__snsTextField {
   display: block;
   padding-left: 20px;
-  width: 350px;
+  // width: 365px;
   height: 80px;
   border-radius: 5px;
   border-style: none;
@@ -245,7 +246,7 @@ label.pic-choose-label {
 
 .profileForm__textField--intro {
   height: 270px;
-  font-size: 13px;
+  font-size: 16px;
   padding: 20px;
   line-height: 1.4;
   @media (min-width: 1024px) {
