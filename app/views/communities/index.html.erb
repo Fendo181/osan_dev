@@ -48,14 +48,14 @@
   <div class="communities-wrapper">
     <h2>すべて</h2>
       <ul class="communities">
+        <% @communities.each do |community| %>
         <li class="community">
-          <% @communities.each do |community| %>
           <div class="communityImage">
             <a href="#"></a>
           </div>
           <h3><%= link_to community.name, community %></h3>
-          <% end %>
         </li>
+        <% end %>
       </ul>
   </div>
 
