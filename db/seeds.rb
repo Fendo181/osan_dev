@@ -18,7 +18,7 @@ User.create!(name:  "Endu Futoshi",
 Profile.create!(user_id: User.find(2).id)
 
 10.times do |n|
-  name = %w(minne作家さん集まれ！ デザフェス出店する人～！ ハンドメイドピアスを作りたい人集まれ！ 〇〇さんの作品ファン アクセサリーの交換会をしたい！！ ゆめかわな作品好きさん ハンドメイド初心者のコミュニティー).sample
+  name = %w(minne作家さん集まれ！ デザフェス出店する人～！ ピアスを作りたい集まれ！ 〇〇さんの作品ファン アクセサリーの交換会をしたい！！ ゆめかわな作品好きさん 初心者のコミュニティー).sample
   category = %w(すべて アクセサリー ファッション 雑貨 素材).sample
   admin_allowed = [true,false].sample
   content = Faker::Lorem.sentence
