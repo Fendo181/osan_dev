@@ -19,13 +19,16 @@ Profile.create!(user_id: User.find(2).id)
 
 
 
-# many samle user
-# 99.times do |n|
-#   name  = Faker::Name.name
-#   email = "example-#{n+1}@railstutorial.org"
-#   password = "password"
-#   User.create!(name:  name,
-#                email: email,
-#                password:              password,
-#                password_confirmation: password)
-# end
+# many samle Community
+20.times do |n|
+  name  = Faker::Name.name
+  email = "example-#{n+1}@railstutorial.org"
+  password = "password"
+  Community.create!(
+                     name:  name,
+                     content: content,
+                     category:category,
+                     admin_allowed: password,
+                     user_id:user_id
+                     )
+end
