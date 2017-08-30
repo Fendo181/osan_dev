@@ -15,6 +15,7 @@
       <%= submit_tag "検索" , class: "serch-submit"%>
       <% end %>
     </div> -->
+
     <div class="serch">
       <div class="icon-search-container" data-ic-class="search-trigger">
         <span class="fa fa-search"></span>
@@ -42,84 +43,22 @@
     </ul>
   </div>
 
+
   <!-- コミュニティ一覧 -->
   <div class="communities-wrapper">
     <h2>すべて</h2>
-    <ul class="communities">
-      <li class="community">
-        <div class="communityImage">
-          <a href="#"></a>
-        </div>
-        <h3>コミュニティー名</h3>
-      </li>
-      <li class="community">
-        <div class="communityImage">
-          <a href="#"></a>
-        </div>
-        <h3>コミュニティー名</h3>
-      </li>
-      <li class="community">
-        <div class="communityImage">
-          <a href="#"></a>
-        </div>
-        <h3>コミュニティー名</h3>
-      </li>
-      <li class="community">
-        <div class="communityImage">
-          <a href="#"></a>
-        </div>
-        <h3>コミュニティー名</h3>
-      </li>
-      <li class="community">
-        <div class="communityImage">
-          <a href="#"></a>
-        </div>
-        <h3>コミュニティー名</h3>
-      </li>
-      <li class="community">
-        <div class="communityImage">
-          <a href="#"></a>
-        </div>
-        <h3>コミュニティー名</h3>
-      </li>
-      <li class="community">
-        <div class="communityImage">
-          <a href="#"></a>
-        </div>
-        <h3>コミュニティー名</h3>
-      </li>
-      <li class="community">
-        <div class="communityImage">
-          <a href="#"></a>
-        </div>
-        <h3>コミュニティー名</h3>
-      </li>
-      <li class="community">
-        <div class="communityImage">
-          <a href="#"></a>
-        </div>
-        <h3>コミュニティー名</h3>
-      </li>
-      <li class="community">
-        <div class="communityImage">
-          <a href="#"></a>
-        </div>
-        <h3>コミュニティー名</h3>
-      </li>
-      <li class="community">
-        <div class="communityImage">
-          <a href="#"></a>
-        </div>
-        <h3>コミュニティー名</h3>
-      </li>
-      <li class="community">
-        <div class="communityImage">
-          <a href="#"></a>
-        </div>
-        <h3>コミュニティー名</h3>
-      </li>
-    </ul>
+      <ul class="communities">
+        <% @communities.each do |community| %>
+        <li class="community">
+          <div class="communityImage">
+            <%= link_to image_tag community.picture.url if community.picture? %>
+          </div>
+          <h3><%= link_to community.name, community %></h3>
+        </li>
+        <% end %>
+      </ul>
   </div>
+
 
   <!-- コミュニティ作成ボタン -->
   <%= link_to "", new_community_path, class: "createCommunityBtn" %>

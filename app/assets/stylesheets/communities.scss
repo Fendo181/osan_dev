@@ -329,6 +329,10 @@ input[type="checkbox"].on-off:checked + ul{
   margin-bottom: 50px;
   h3 {
     font-size: 24px;
+    a {
+      text-decoration: none;
+      color: #000;
+    }
     @media (min-width: 1024px) {
       font-size: 16px;
       margin: 10px 0;
@@ -339,11 +343,24 @@ input[type="checkbox"].on-off:checked + ul{
 .communityImage {
   width: 400px;
   height: 270px;
-  background: gray;
+  // background: gray;
   border-radius: 5px;
+  a {
+    display: inline-block;
+  }
+  img {
+    width: 400px;
+    height: 270px;
+    border-radius: 5px;
+  }
   @media (min-width: 1024px) {
     width: 318px;
     height: 200px;
+    img {
+      width: 318px;
+      height: 200px;
+      border-radius: 5px;
+    }
   }
 }
 
@@ -528,6 +545,11 @@ p.chose {
 .community-show-name {
   font-size: 50px;
   margin-bottom: 80px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
   @media (min-width: 1024px) {
     font-size: 30px;
     text-align: center;
@@ -564,5 +586,31 @@ p.chose {
     width: 200px;
     height: 200px;
     line-height: 200px;
+  }
+}
+
+.comu-cen {
+  margin-top: 30px;
+  width: 650px;
+  height: 370px;
+  margin: 30px auto;
+  border-radius: 5px;
+  img {
+    width: 650px;
+    height: 370px;
+  }
+}
+
+.picture {
+  > input {
+    font-size: 25px;
+    padding-bottom: 35px;
+    margin-left: 70px;
+    @media (min-width: 1024px) {
+      font-size: 18px;
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+    }
   }
 }

@@ -1,6 +1,7 @@
 class CommunitiesController < ApplicationController
 
   def index
+    @communities = Community.all
   end
 
   def new
@@ -45,7 +46,7 @@ class CommunitiesController < ApplicationController
 
     def community_params
       params.require(:community).permit(:name, :content, :category,
-                                   :admin_allowed)
+                                   :admin_allowed,:picture)
     end
 
 end
