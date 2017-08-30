@@ -54,19 +54,20 @@
 }
 
 .profilePic {
-  width: 220px;
-  height: 220px;
-  background: #ff8372;
-  border-radius: 220px;
   text-align: center;
-  line-height: 220px;
-  margin: 50px auto 20px;
-  font-size: 50px;
-  color: #fff;
-  @media (min-width: 1024px) {
-    width: 180px;
-    height: 180px;
-    line-height: 180px;
+  img {
+    width: 220px;
+    height: 220px;
+    background: #ff8372;
+    border-radius: 220px;
+    text-align: center;
+    line-height: 220px;
+    margin: 50px auto 20px;
+    @media (min-width: 1024px) {
+      width: 180px;
+      height: 180px;
+      line-height: 180px;
+    }
   }
 }
 
