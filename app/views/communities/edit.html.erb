@@ -3,7 +3,15 @@
   <h1 class="community-new-title">コミュニティ編集</h1>
   <div>
     <%= form_for(@community) do |f| %>
-    <div class="choose-photo">写真</div>
+    <!-- <div class="choose-photo">写真</div> -->
+
+    <div class="choose-photo commu-photo">
+      <%= image_tag @community.picture.url if @community.picture? %>
+    </div>
+
+    <span class="picture">
+      <%= f.file_field :picture %>
+    </span>
 
     <ul>
       <!-- <li class="">

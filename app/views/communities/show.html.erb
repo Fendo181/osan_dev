@@ -13,7 +13,9 @@
     <% end %>
   </div>
 
-  <div class="choose-photo commu-photo">写真</div>
+  <div class="choose-photo commu-photo">
+    <%= image_tag @community.picture.url if @community.picture? %>
+  </div>
 
   <div class="community-show">
     <h2 class="community-show-name"> <%= @community.name %> </h2>
