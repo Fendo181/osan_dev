@@ -23,12 +23,13 @@ Profile.create!(user_id: User.find(2).id)
   admin_allowed = [true,false].sample
   content = Faker::Lorem.sentence
   # user_id = "#{n+1}"
-  picture =
+  picture = File.join(Rails.root, "test/fixtures/images/1.jpg")
   Community.create!(
                      name: name,
                      category: category,
                      content: content,
                      admin_allowed: admin_allowed,
-                     user_id:1
+                     user_id:1,
+                     picture:File.new(picture)
                      )
 end
