@@ -7,8 +7,17 @@ class PictureUploader < CarrierWave::Uploader::Base
   process resize_to_limit: [400, 400]
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
-  # storage :fog
+
+  # picture storage
+  if Rails.env.production?
+   # public heroku S3
+   storage :fog
+  else
+   # local /public/
+   storage :file
+  end
+
+
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
