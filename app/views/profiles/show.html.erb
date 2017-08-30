@@ -17,8 +17,10 @@
       </label> -->
     <!-- </li> -->
 
-    <div class="profilePic">顔</div>
-    <%= image_tag @profile.picture.url if @profile.picture? %>
+    <div class="profilePic">
+      <%= image_tag @profile.picture.url if @profile.picture? %>
+    </div>
+
     <div class="userName">
       <%= @profile.user.name %>
     </div>
