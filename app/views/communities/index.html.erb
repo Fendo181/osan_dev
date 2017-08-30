@@ -51,7 +51,7 @@
         <% @communities.each do |community| %>
         <li class="community">
           <div class="communityImage">
-            <%= image_tag community.picture.url if community.picture? %>
+            <%= link_to image_tag community.picture.url if community.picture? %>
           </div>
           <h3><%= link_to community.name, community %></h3>
         </li>

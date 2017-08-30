@@ -5,7 +5,6 @@
 
   <div>
     <%= form_for(@community) do |f| %>
-    <div class="choose-photo">写真</div>
     <span class="picture">
       <%= f.file_field :picture %>
     </span>
@@ -17,7 +16,7 @@
       </li>
       <li class="community-new-items">
         <%= f.label :category,"カテゴリ", class: "communityNew-name communityNew-category-choose" %>
-        <%= f.select :category, [ ["すべて", "すべて"], ["アクセサリー", "アクセサリー"], ["ファッション", "ファッション"], ["雑貨", "雑化"], ["素材","素材"] ], class: "communityNew-category-choose" %>
+        <%= f.select :category, [ ["アクセサリー", "アクセサリー"], ["ファッション", "ファッション"], ["雑貨", "雑化"], ["素材","素材"], ["その他", "その他"] ], class: "communityNew-category-choose" %>
       </li>
       <li class="community-new-items">
         <%= f.label :content,"コミュニティの説明", class: "communityNew-name community-intro" %>
