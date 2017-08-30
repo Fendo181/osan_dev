@@ -1,5 +1,7 @@
 <% provide(:title, @profile.user.name) %>
-
+<head>
+    <meta name="viewport" content="user-scalable=no" />
+</head>
 <body class="profileForm">
   <div>
     <%= form_for(@profile) do |f| %>
