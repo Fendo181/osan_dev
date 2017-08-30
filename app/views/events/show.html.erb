@@ -1,27 +1,37 @@
 <% provide(:title,@event.name) %>
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
 
-<p>写真的な何かがある</p>
+<body class="communityBody">
+  <div class="profile-header">
+    <h1 class="go-to-top">
+      <%= link_to '', communities_path, class: 'to-top' %>
+    </h1>
+    <%= link_to edit_event_path(@event.id) do %>
+      <i class="fa fa-pencil"></i>
+    <% end %>
+  </div>
 
-<p>
-イベント名:<%= @event.name %>
-</p>
+  <div class="choose-photo commu-photo">写真</div>
 
-<p>
-主催者:<%= @event.user.name %>
-</p>
+  <div class="community-show">
+    <h2 class="community-show-name"> <%= @event.name %> </h2>
 
+    <h3 class="community-show-title">設立者</h3>
+    <p class="community-show-text"><%= @event.user.name %><p>
 
-<p>詳細</p>
-<ul>
-  <%# 場所 %>
-  <li><%= @event.location %></li>
-  <%# 日時 %>
-  <li><%= @event.date %></li>
-  <%# お金 %>
-  <li><%= @event.money %></li>
-</ul>
+    <h3 class="community-show-title">詳細</h3>
+    <ul class="event-details">
+      <%# 場所 %>
+      <li class="event-detail"><i class="fa fa-map-marker" aria-hidden="true"></i>　<%= @event.location %></li>
+      <%# 日時 %>
+      <li class="event-detail"><i class="fa fa-clock-o" aria-hidden="true"></i>　<%= @event.date %></li>
+      <%# お金 %>
+      <li class="event-detail"><i class="fa fa-jpy" aria-hidden="true"></i>　<%= @event.money %></li>
+    </ul>
 
-このイベントについて:<%= @event.content %>
-
-<h2>管理者しか編集できないボタン。</h2>
-<%= link_to "イベントを編集する", edit_event_path(@event.id),class: "" %>
+    <h3 class="community-show-title">このイベントについて</h3>
+    <p class="community-show-text"><%= @event.content %></p>
+  </div>
+</body>

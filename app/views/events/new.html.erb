@@ -1,32 +1,38 @@
-<p>イベント設立者:<%= @community.user.name %></p>
-<p>コミュニティ:<%= @community.name %></p>
+<!-- <p>イベント設立者:<%= @community.user.name %></p>
+<p>コミュニティ:<%= @community.name %></p> -->
 
+<body class="community-new">
+  <h1 class="community-new-title">コミュニティ作成</h1>
 
-<div class="">
-  <%= form_for(@event, url: events_community_path) do |f| %>
+  <div>
+    <%= form_for(@event, url: events_community_path) do |f| %>
+    <div class="choose-photo">写真</div>
 
-  <ul class="">
-    <li>
-      <%= f.label :name,"イベント名", class: "" %>
-      <%= f.text_area :name, :class => "" %>
-    </li>
-    <li>
-      <%= f.label :date,"開催日時", class: "" %>
-      <%= f.datetime_select :date, :class => "" %>
-    </li>
-    <li>
-      <%= f.label :location,"開催場所", class: "" %>
-      <%= f.text_area :location, :class => "" %>
-    </li>
-    <li>
-      <%= f.label :money,"費用", class: "" %>
-      <%= f.text_area :money, :class => "" %>
-    </li>
-    <li>
-      <%= f.label :content,"イベント詳細", class: "" %>
-      <%= f.text_field :content, :class => "" %>
-    </li>
-    <%= f.submit "イベントを作成する", class: ""%>
-  </ul>
-  <% end %>
-</div>
+    <ul class="">
+      <li  class="community-new-items">
+        <%= f.label :name,"イベント名", class: "communityNew-name" %>
+        <%= f.text_area :name, :class => "communityNew-name-text" %>
+      </li>
+      <li  class="community-new-items">
+        <%= f.label :date,"開催日時", class: "communityNew-name" %>
+        <div class="time">
+          <%= f.datetime_select :date, :class => "communityNew-name-text time-choose" %>
+        </div>
+      </li>
+      <li  class="community-new-items">
+        <%= f.label :location,"開催場所", class: "communityNew-name" %>
+        <%= f.text_area :location, :class => "communityNew-name-text" %>
+      </li>
+      <li  class="community-new-items">
+        <%= f.label :money,"費用", class: "communityNew-name" %>
+        <%= f.text_area :money, :class => "communityNew-name-text" %>
+      </li>
+      <li  class="community-new-items">
+        <%= f.label :content,"イベント詳細", class: "communityNew-name" %>
+        <%= f.text_field :content, :class => "communityNew-name-text" %>
+      </li>
+      <%= f.submit "イベントを作成する", class: "profileForm__submit", id: "commu"%>
+    </ul>
+    <% end %>
+  </div>
+</body>
