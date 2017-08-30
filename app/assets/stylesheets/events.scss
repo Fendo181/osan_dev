@@ -1,3 +1,33 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.time {
+  display: block;
+  select {
+    font-size: 25px;
+    background: #fff;
+    padding: 10px;
+  }
+  #event_date_2i {
+    padding: 7px 10px 13px;
+    @media (min-width: 1024px) {
+      padding: 6px 0 14px;
+    }
+  }
+}
+
+.time-choose {
+  font-size: 20px;
+}
+
+.event-details {
+  margin-bottom: 75px;
+}
+
+.event-detail {
+  font-size: 35px;
+  margin-bottom: 40px;
+  i {
+    color: #ff8372;
+  }
+}
