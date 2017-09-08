@@ -35,5 +35,10 @@
 
     <h3 class="community-show-title">このイベントについて</h3>
     <p class="community-show-text"><%= @event.content %></p>
+
+    <p>コミュニティへ戻る。</p>
+    <h3><%= link_to @community.name, @community %></h3>
+
+
   </div>
 </body>
