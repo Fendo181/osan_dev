@@ -11,6 +11,7 @@ class CommunitiesController < ApplicationController
   def show
     # @community = findcurrent_user.communities.build(community_params)
     @community = Community.find(params[:id])
+    @events = Event.where(community_id: @community.id)
   end
 
   def create

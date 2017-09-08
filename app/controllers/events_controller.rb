@@ -5,7 +5,6 @@ class EventsController < ApplicationController
   end
 
   def show
-    @community = Community.find(params[:id])
     @event = Event.find(params[:id])
   end
 
