@@ -28,7 +28,6 @@ class EventsController < ApplicationController
     @community = current_user.communities.find(params[:id])
     @event = current_user.events.build(event_params)
     @event.community_id = @community.id
-    # binding.pry
     #ユーザidとコミュニティidに紐付いてコミュニティを作成する。
     if @event.save
       #ユーザ登録が成功した時点で@community_commnetも作成する
@@ -45,7 +44,7 @@ class EventsController < ApplicationController
   private
     def event_params
       params.require(:event).permit(:name, :date, :location,
-                                      :money, :content)
+                                    :money, :content, :picture)
     end
 
 end
