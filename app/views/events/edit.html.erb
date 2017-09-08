@@ -5,7 +5,9 @@
   <h1 class="community-new-title">コミュニティ編集</h1>
   <div>
     <%= form_for(@event) do |f| %>
-    <div class="choose-photo">写真</div>
+    <span class="picture">
+      <%= f.file_field :picture %>
+    </span>
     <ul>
       <li class="community-new-items">
         <%# ここは編集しない。 %>

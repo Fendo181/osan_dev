@@ -8,7 +8,11 @@
 
   <div>
     <%= form_for(@event, url: events_community_path) do |f| %>
-    <div class="choose-photo">写真</div>
+    <!-- <div class="choose-photo">写真</div> -->
+    <span class="picture">
+      <%= f.file_field :picture %>
+    </span>
+
 
     <ul class="">
       <li  class="community-new-items">

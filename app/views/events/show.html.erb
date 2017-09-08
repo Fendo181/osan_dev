@@ -13,7 +13,9 @@
     <% end %>
   </div>
 
-  <div class="choose-photo commu-photo">写真</div>
+  <div class="choose-photo commu-photo comu-cen">
+    <%= image_tag @event.picture.url if @event.picture? %>
+  </div>
 
   <div class="community-show">
     <h2 class="community-show-name"> <%= @event.name %> </h2>
@@ -33,5 +35,10 @@
 
     <h3 class="community-show-title">このイベントについて</h3>
     <p class="community-show-text"><%= @event.content %></p>
+
+    <p>コミュニティへ戻る。</p>
+    <h3><%= link_to @event.community.name, @event.community %></h3>
+
+
   </div>
 </body>
