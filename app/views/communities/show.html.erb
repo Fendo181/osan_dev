@@ -37,11 +37,13 @@
     <% end %>
 
     <h3 class="community-show-title">開催イベント</h3>
-    <%= link_to "イベントを作成", events_community_path, class: "create-event" %>
 
     <!-- イベント覧 -->
     <div class="">
         <ul class="">
+          <li>
+            <%= link_to "イベントを作成", events_community_path, class: "create-event" %>
+          </li>
           <% @events.each do |event| %>
           <li class="">
             <div class="">
