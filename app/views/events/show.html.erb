@@ -36,8 +36,7 @@
     <h3 class="community-show-title">このイベントについて</h3>
     <p class="community-show-text"><%= @event.content %></p>
 
-    <p>コミュニティへ戻る。</p>
-    <h3><%= link_to @event.community.name, @event.community %></h3>
+    <h3><%= link_to "コミュニティに戻る", @event.community %></h3>
 
 
   </div>
