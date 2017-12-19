@@ -50,6 +50,7 @@ group :development, :test do
   gem 'sqlite3', '1.3.11'
   gem 'pry-rails'
   gem 'pry-byebug'
+  gem 'rspec-rails', '~> 3.6'
 end
 
 group :development do
